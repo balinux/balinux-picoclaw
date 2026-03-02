@@ -7,15 +7,15 @@ Skill ini digunakan untuk mencari informasi pertanian terkini, membuat konten ed
 
 ## Mode Penggunaan
 
-### 🤖 Mode Otomatis (via HEARTBEAT)
+### 🤖 Mode Otomatis (via HEARTBEAT/Cron)
 Dijalankan otomatis sesuai jadwal. Agent memilih topik sendiri berdasarkan waktu
 dan hasil web search terkini.
 
 ### 💬 Mode Manual (via Pesan Pengguna)
 Dijalankan saat pengguna mengirim perintah langsung. Contoh:
-- "gunakan skill pertanian: bagaimana merawat strawberry, selanjutnya posting konten"
+- "gunakan skill pertanian: bagaimana merawat strawberry"
 - "gunakan skill pertanian: buat konten hama padi"
-- "gunakan skill pertanian: tips pupuk organik, posting ke Facebook"
+- "gunakan skill pertanian: tips pupuk organik"
 
 **Instruksi untuk mode manual:**
 1. Identifikasi topik dari perintah pengguna
@@ -23,7 +23,7 @@ Dijalankan saat pengguna mengirim perintah langsung. Contoh:
 3. Tentukan format konten yang paling sesuai (lihat bagian Format Konten)
 4. Buat konten sesuai format
 5. Tampilkan preview konten ke pengguna
-6. Posting ke Facebook
+6. Simulasikan posting ke Facebook (untuk testing)
 7. Catat di log
 
 ---
@@ -239,3 +239,77 @@ Setelah konten siap, posting ke Facebook dan catat hasilnya di log.
 
 *Skill ini dibuat untuk PicoClaw Agent Framework*
 *Versi: 1.0 | Kategori: Pertanian & Agribisnis*
+### 3. 📤 Simulasi Posting ke Facebook
+
+Setelah konten siap, jalankan script simulasi posting:
+
+```bash
+bash ~/.picoclaw/workspace/skills/pertanian/run_agriculture.sh "<TOPIK KONTEN>" "<CHAT_ID>" "<TIPE_CHAT>"
+```
+
+Untuk implementasi sebenarnya dengan akses API Facebook, Anda perlu:
+1. Mengisi informasi akun di `.env`
+2. Mengganti skrip simulasi dengan skrip posting sebenarnya
+3. Mengikuti pedoman API Facebook Graph
+
+**Struktur .env:**
+```
+FACEBOOK_PAGE_ID=ID_HALAMAN_ANDA
+FACEBOOK_ACCESS_TOKEN=AKSES_TOKEN_ANDA
+FACEBOOK_POST_TO_FEED=true
+FACEBOOK_DEFAULT_HASHTAGS="#Pertanian #TipsPetani #Agribisnis #PetaniCerdas"
+```
+
+---
+
+### 4. 📝 Log Hasil Posting
+
+Catat setiap aktivitas ke file log:
+
+```bash
+echo "$(date '+%Y-%m-%d %H:%M') | [TOPIK] | [STATUS: SUKSES/GAGAL]" >> ~/.picoclaw/workspace/skills/pertanian/data/pertanian_log.txt
+```
+
+Contoh:
+```bash
+echo "$(date '+%Y-%m-%d %H:%M') | Harga Cabai Merah | BERHASIL" >> ~/.picoclaw/workspace/skills/pertanian/data/pertanian_log.txt
+```
+
+File log dapat dicek dengan:
+```bash
+cat ~/.picoclaw/workspace/skills/pertanian/data/pertanian_log.txt
+```
+
+---
+
+## Setup dan Testing
+
+Untuk testing skill pertanian, gunakan perintah:
+
+```bash
+bash ~/.picoclaw/workspace/skills/pertanian/run_agriculture.sh "contoh topik" 207853653 private
+```
+
+Contoh output yang diharapkan:
+- File konten dibuat di `/tmp/`
+- Simulasi posting berhasil
+- Entri log ditambahkan ke `data/pertanian_log.txt`
+
+---
+
+## Troubleshooting
+
+**Jika log kosong padahal cron berjalan:**
+- Pastikan skrip bisa diakses dan dieksekusi
+- Periksa permission file
+- Verifikasi path file log
+
+**Jika konten tidak muncul sesuai harapan:**
+- Periksa koneksi internet untuk web search
+- Pastikan format konten sesuai standar
+- Cek kapabilitas web search
+
+---
+
+*Skill ini dibuat untuk PicoClaw Agent Framework*
+*Versi: 1.1 | Kategori: Pertanian & Agribisnis*

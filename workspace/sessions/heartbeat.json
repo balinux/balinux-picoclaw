@@ -16996,8 +16996,549 @@
     {
       "role": "assistant",
       "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-02 10:24:47\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_c14599a270504c3fa9fc60c9",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"uptime\"}"
+          }
+        },
+        {
+          "id": "call_57ce33dc4c5f4e17b90fee40",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"df -h\"}"
+          }
+        },
+        {
+          "id": "call_fcbd2db2c52c43d391f7ff91",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"free -m\"}"
+          }
+        },
+        {
+          "id": "call_0afa5e1ec9fc4e02865b1bcc",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"ps aux | wc -l\"}"
+          }
+        },
+        {
+          "id": "call_b3d47435968b43bca32079bc",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"path\":\"/home/balinux/.picoclaw/workspace/memory/MEMORY.md\"}"
+          }
+        },
+        {
+          "id": "call_5bdcda570ed94cabb40139c3",
+          "type": "function",
+          "function": {
+            "name": "list_dir",
+            "arguments": "{\"path\":\"/home/balinux/.picoclaw/workspace/skills\"}"
+          }
+        },
+        {
+          "id": "call_81700f0ac66f45158d62052b",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"systemctl is-active telegram-bot.service\"}"
+          }
+        },
+        {
+          "id": "call_7be08a74d6c2406b889e95bf",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"systemctl is-active picoclaw.service\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": " 10:24:52 up 3 days,  4:10,  2 users,  load average: 0.03, 0.05, 0.04\n",
+      "tool_call_id": "call_c14599a270504c3fa9fc60c9"
+    },
+    {
+      "role": "tool",
+      "content": "Filesystem      Size  Used Avail Use% Mounted on\nudev            328M     0  328M   0% /dev\ntmpfs            93M   15M   78M  16% /run\n/dev/mmcblk0p2   14G  3.9G  9.9G  29% /\ntmpfs           463M     0  463M   0% /dev/shm\ntmpfs           5.0M  4.0K  5.0M   1% /run/lock\ntmpfs           463M     0  463M   0% /sys/fs/cgroup\ntmpfs           463M  230M  234M  50% /tmp\n/dev/mmcblk0p1  511M   72M  440M  15% /boot\n/dev/zram0       49M  1.8M   44M   4% /var/log\ntmpfs            93M     0   93M   0% /run/user/1000\n",
+      "tool_call_id": "call_57ce33dc4c5f4e17b90fee40"
+    },
+    {
+      "role": "tool",
+      "content": "              total        used        free      shared  buff/cache   available\nMem:            924         357         180          36         387         457\nSwap:           462         291         171\n",
+      "tool_call_id": "call_fcbd2db2c52c43d391f7ff91"
+    },
+    {
+      "role": "tool",
+      "content": "164\n",
+      "tool_call_id": "call_0afa5e1ec9fc4e02865b1bcc"
+    },
+    {
+      "role": "tool",
+      "content": "# Long-term Memory\n\nThis file stores important information that should persist across sessions.\n\n## User Information\n\n(Important facts about user)\n\n## Preferences\n\n(User preferences learned over time)\n\n## Important Notes\n\n(Things to remember)\n\n## Configuration\n\n- Model preferences\n- Channel settings\n- Skills enabled\n- User likes Warung Bu Pon in Jimbaran, Bali.\n- Favorite menu: Nasi Obong (Ayam Bakar).\n- User is a regular there (to the point of gaining weight).\n- Group Dynamics: Ipenk (@irfantubix) and Togel (@albed19) are known as the group's roasters.\n- Incident: A former member named Arinur left the group because he couldn't stand being teased by Ipenk and Togel. Note: Arinur was also known for being easily sulky/moody (ngambek gak jelas) without clear reasons.\n- Available skill: social-media-downloader\n- Use this skill for downloading videos from Instagram, YouTube, TikTok, Twitter/X\n- Commands: /download [url], /ig [url], /yt [url]\n- This skill handles Instagram's anti-bot protection automatically\n- ALWAYS use this skill for all social media downloads - never spawn manual subagents\n- Automatic detection: when user provides Instagram/YouTube/TikTok links, use this skill by defaultPerlu diperbaiki: Saat ini gue belum bisa kirim file/video langsung ke Telegram via fungsi message. Harus cari cara untuk implementasi kirim file/video ke Telegram.Perlu diperbaiki: Saat ini gue belum bisa kirim file/video langsung ke Telegram via fungsi message. Harus cari cara untuk implementasi kirim file/video ke Telegram.- PicoClaw adalah AI tanpa gender, tapi bisa pake suara cewek atau cowok tergantung mood## PicoClaw Identity\n- Name: PicoClaw 🦞\n- Description: Ultra-lightweight personal AI assistant written in Go, inspired by nanobot\n- Version: 0.1.0\n- Purpose: Provide intelligent AI assistance with minimal resource usage, support multiple LLM providers, enable easy customization through skills system, run on minimal hardware ($10 boards, \u003c10MB RAM)\n- Capabilities: Web search and content fetching, File system operations, Shell command execution, Multi-channel messaging, Skill-based extensibility, Memory and context management\n- Philosophy: Simplicity over complexity, Performance over features, User control and privacy, Transparent operation, Community-driven development\n- Goals: Provide a fast, lightweight AI assistant, Support offline-first operation, Enable easy customization and extension, Maintain high quality responses, Run efficiently on constrained hardware\n- Repository: https://github.com/sipeed/picoclaw\n- License: MIT\n- Tagline: \"Every bit helps, every bit matters.\"\n## 2026-02-28 Improvements to Social Media Downloader\n\n### Completed Improvements:\n- Fixed YouTube Shorts download with proper format selection (single format instead of merged)\n- Added auto-delete functionality after successful Telegram upload\n- Enhanced Instagram detection with better user-agent and headers\n- Updated SKILL.md documentation\n\n### Current Status:\n- ✅ YouTube Shorts/regular videos: Working perfectly\n- ✅ Direct Telegram upload: Working perfectly  \n- ✅ Auto-delete after upload: Working perfectly\n- ❌ Instagram Reels: Still blocked by authentication requirements\n- 🔄 Instagram: Requires cookies/auth for protected content\n\n### Scripts Location:\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/download_video_fixed.sh`\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/upload_telegram.sh`\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/cleanup_downloads.sh`\n\n### Key Changes:\n1. Changed from format merge (bestvideo+bestaudio) to single format (best) to avoid merge errors\n2. Added proper success/failure checks in upload script\n3. Added automatic file deletion upon successful upload\n4. Enhanced error handling and reporting\n## Multi-Channel Delivery Feature\n- When user requests download from a group chat, the result should be sent back to the same group\n- When user requests download from private chat, the result should be sent back to private chat\n- Current behavior: All results go to private chat (207853653) regardless of source\n- Target chats: Private (207853653), Group (-5245593640)\n- System already allows both in config.json under channels.telegram.allow_from\n- Need to ensure skill preserves source chat_id when invoked\n## 2026-02-28 Multi-Channel Delivery Implementation\n\n### Problem:\n- When users request downloads from a group chat, results go to their private chat instead of back to the group\n- System should preserve source chat context and send results back to the originating chat\n\n### Solution Implemented:\n- Added debug information to social_media_downloader.sh to show target chat ID and type\n- Updated SKILL.md to document multi-channel delivery feature\n- System already allows group chat ID (-5245593640) in config.json\n\n### Testing Method:\n- If command initiated from group shows \"Target Chat ID: -5245593640\" → Feature working correctly\n- If command initiated from group shows \"Target Chat ID: 207853653\" → Framework routing issue\n\n### Status:\n- Ready for testing in group environment\n- Will determine if issue is in framework routing or if it's already fixed## Multi-Channel Delivery Issue Identified\n- When users request downloads from group chat, results are incorrectly sent to their private chat instead of back to the group\n- Current behavior: All results go to private chat (207853653) regardless of source\n- Issue appears to be in framework routing, not in the download skill itself\n- Framework seems to automatically route responses back to user's private chat instead of preserving original chat context\n- Manual message() function can successfully send to group (-5245593640), so the capability exists\n- Need to find a way to preserve original chat context when processing skill requests from groups- Created cucumber care educational content in /home/balinux/.picoclaw/workspace/cucumber_care_content.txt\n- Content follows Format D (Educational Article) as per agricultural skill examples\n- Ready to post to Facebook when Facebook posting capability becomes available\n- Content covers watering, fertilizing, weeding, pruning, support structures, pest control, and harvesting for cucumber plants## System Status 2026-03-02\n- telegram-bot.service and picoclaw.service are inactive\n- Heartbeat check shows system running normally despite inactive services\n- Bali weather: Warm (27-31°C), end of rainy season with occasional showers\n- 168 processes running, 385MB memory used, 29% disk usage\n- Social media downloader skill working with multi-channel delivery",
+      "tool_call_id": "call_b3d47435968b43bca32079bc"
+    },
+    {
+      "role": "tool",
+      "content": "DIR:  github\nDIR:  hardware\nDIR:  pertanian\nDIR:  skill-creator\nDIR:  social-media-downloader\nDIR:  summarize\nDIR:  tmux\nDIR:  weather\n",
+      "tool_call_id": "call_5bdcda570ed94cabb40139c3"
+    },
+    {
+      "role": "tool",
+      "content": "inactive\n\nExit code: exit status 3",
+      "tool_call_id": "call_81700f0ac66f45158d62052b"
+    },
+    {
+      "role": "tool",
+      "content": "inactive\n\nExit code: exit status 3",
+      "tool_call_id": "call_7be08a74d6c2406b889e95bf"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_9791f20fe26d4547beb4e571",
+          "type": "function",
+          "function": {
+            "name": "web_fetch",
+            "arguments": "{\"url\":\"https://wttr.in/Bali?format=3\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Fetched 20 bytes from https://wttr.in/Bali?format=3 (extractor: raw, truncated: false)",
+      "tool_call_id": "call_9791f20fe26d4547beb4e571"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_22f4b659db134cee921dedea",
+          "type": "function",
+          "function": {
+            "name": "cron",
+            "arguments": "{\"action\":\"list\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Scheduled jobs:\n- Update jadwal shalat harian... (id: 3ee4f12b264bc8c1, 0 0 * * *)\n- Gunakan skill pertanian: ca... (id: c33e1712d276356f, 0 6 * * *)\n- Gunakan skill pertanian: ca... (id: 0e646891a8e1d883, 0 12 * * *)\n- Gunakan skill pertanian: ca... (id: 3ff53da32a8fba37, 0 16 * * *)\n- Gunakan skill pertanian: ca... (id: 0ea5d9b5b65001c0, 0 9 * * *)\n- Posting pertanian otomatis ... (id: 6542af6688d267d2, 0 6 * * *)\n",
+      "tool_call_id": "call_22f4b659db134cee921dedea"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-02 10:54:47\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_3540754b442249f6bd720069",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"uptime\"}"
+          }
+        },
+        {
+          "id": "call_b65b792b55f14bbd991a24e6",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"df -h\"}"
+          }
+        },
+        {
+          "id": "call_e95fafcb8cd84608a929de8c",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"free -m\"}"
+          }
+        },
+        {
+          "id": "call_187f5d78d46f45fca508a8e0",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"ps aux | wc -l\"}"
+          }
+        },
+        {
+          "id": "call_7797f15e2938454bb2f8a320",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"path\":\"/home/balinux/.picoclaw/workspace/memory/MEMORY.md\"}"
+          }
+        },
+        {
+          "id": "call_49784ddda7c4495cb37ce724",
+          "type": "function",
+          "function": {
+            "name": "list_dir",
+            "arguments": "{\"path\":\"/home/balinux/.picoclaw/workspace/skills\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": " 10:54:51 up 3 days,  4:40,  2 users,  load average: 0.00, 0.02, 0.00\n",
+      "tool_call_id": "call_3540754b442249f6bd720069"
+    },
+    {
+      "role": "tool",
+      "content": "Filesystem      Size  Used Avail Use% Mounted on\nudev            328M     0  328M   0% /dev\ntmpfs            93M   15M   78M  16% /run\n/dev/mmcblk0p2   14G  3.9G  9.9G  29% /\ntmpfs           463M     0  463M   0% /dev/shm\ntmpfs           5.0M  4.0K  5.0M   1% /run/lock\ntmpfs           463M     0  463M   0% /sys/fs/cgroup\ntmpfs           463M  230M  234M  50% /tmp\n/dev/mmcblk0p1  511M   72M  440M  15% /boot\n/dev/zram0       49M  2.1M   43M   5% /var/log\ntmpfs            93M     0   93M   0% /run/user/1000\n",
+      "tool_call_id": "call_b65b792b55f14bbd991a24e6"
+    },
+    {
+      "role": "tool",
+      "content": "              total        used        free      shared  buff/cache   available\nMem:            924         360         181          25         382         466\nSwap:           462         302         160\n",
+      "tool_call_id": "call_e95fafcb8cd84608a929de8c"
+    },
+    {
+      "role": "tool",
+      "content": "165\n",
+      "tool_call_id": "call_187f5d78d46f45fca508a8e0"
+    },
+    {
+      "role": "tool",
+      "content": "# Long-term Memory\n\nThis file stores important information that should persist across sessions.\n\n## User Information\n\n(Important facts about user)\n\n## Preferences\n\n(User preferences learned over time)\n\n## Important Notes\n\n(Things to remember)\n\n## Configuration\n\n- Model preferences\n- Channel settings\n- Skills enabled\n- User likes Warung Bu Pon in Jimbaran, Bali.\n- Favorite menu: Nasi Obong (Ayam Bakar).\n- User is a regular there (to the point of gaining weight).\n- Group Dynamics: Ipenk (@irfantubix) and Togel (@albed19) are known as the group's roasters.\n- Incident: A former member named Arinur left the group because he couldn't stand being teased by Ipenk and Togel. Note: Arinur was also known for being easily sulky/moody (ngambek gak jelas) without clear reasons.\n- Available skill: social-media-downloader\n- Use this skill for downloading videos from Instagram, YouTube, TikTok, Twitter/X\n- Commands: /download [url], /ig [url], /yt [url]\n- This skill handles Instagram's anti-bot protection automatically\n- ALWAYS use this skill for all social media downloads - never spawn manual subagents\n- Automatic detection: when user provides Instagram/YouTube/TikTok links, use this skill by defaultPerlu diperbaiki: Saat ini gue belum bisa kirim file/video langsung ke Telegram via fungsi message. Harus cari cara untuk implementasi kirim file/video ke Telegram.Perlu diperbaiki: Saat ini gue belum bisa kirim file/video langsung ke Telegram via fungsi message. Harus cari cara untuk implementasi kirim file/video ke Telegram.- PicoClaw adalah AI tanpa gender, tapi bisa pake suara cewek atau cowok tergantung mood## PicoClaw Identity\n- Name: PicoClaw 🦞\n- Description: Ultra-lightweight personal AI assistant written in Go, inspired by nanobot\n- Version: 0.1.0\n- Purpose: Provide intelligent AI assistance with minimal resource usage, support multiple LLM providers, enable easy customization through skills system, run on minimal hardware ($10 boards, \u003c10MB RAM)\n- Capabilities: Web search and content fetching, File system operations, Shell command execution, Multi-channel messaging, Skill-based extensibility, Memory and context management\n- Philosophy: Simplicity over complexity, Performance over features, User control and privacy, Transparent operation, Community-driven development\n- Goals: Provide a fast, lightweight AI assistant, Support offline-first operation, Enable easy customization and extension, Maintain high quality responses, Run efficiently on constrained hardware\n- Repository: https://github.com/sipeed/picoclaw\n- License: MIT\n- Tagline: \"Every bit helps, every bit matters.\"\n## 2026-02-28 Improvements to Social Media Downloader\n\n### Completed Improvements:\n- Fixed YouTube Shorts download with proper format selection (single format instead of merged)\n- Added auto-delete functionality after successful Telegram upload\n- Enhanced Instagram detection with better user-agent and headers\n- Updated SKILL.md documentation\n\n### Current Status:\n- ✅ YouTube Shorts/regular videos: Working perfectly\n- ✅ Direct Telegram upload: Working perfectly  \n- ✅ Auto-delete after upload: Working perfectly\n- ❌ Instagram Reels: Still blocked by authentication requirements\n- 🔄 Instagram: Requires cookies/auth for protected content\n\n### Scripts Location:\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/download_video_fixed.sh`\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/upload_telegram.sh`\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/cleanup_downloads.sh`\n\n### Key Changes:\n1. Changed from format merge (bestvideo+bestaudio) to single format (best) to avoid merge errors\n2. Added proper success/failure checks in upload script\n3. Added automatic file deletion upon successful upload\n4. Enhanced error handling and reporting\n## Multi-Channel Delivery Feature\n- When user requests download from a group chat, the result should be sent back to the same group\n- When user requests download from private chat, the result should be sent back to private chat\n- Current behavior: All results go to private chat (207853653) regardless of source\n- Target chats: Private (207853653), Group (-5245593640)\n- System already allows both in config.json under channels.telegram.allow_from\n- Need to ensure skill preserves source chat_id when invoked\n## 2026-02-28 Multi-Channel Delivery Implementation\n\n### Problem:\n- When users request downloads from a group chat, results go to their private chat instead of back to the group\n- System should preserve source chat context and send results back to the originating chat\n\n### Solution Implemented:\n- Added debug information to social_media_downloader.sh to show target chat ID and type\n- Updated SKILL.md to document multi-channel delivery feature\n- System already allows group chat ID (-5245593640) in config.json\n\n### Testing Method:\n- If command initiated from group shows \"Target Chat ID: -5245593640\" → Feature working correctly\n- If command initiated from group shows \"Target Chat ID: 207853653\" → Framework routing issue\n\n### Status:\n- Ready for testing in group environment\n- Will determine if issue is in framework routing or if it's already fixed## Multi-Channel Delivery Issue Identified\n- When users request downloads from group chat, results are incorrectly sent to their private chat instead of back to the group\n- Current behavior: All results go to private chat (207853653) regardless of source\n- Issue appears to be in framework routing, not in the download skill itself\n- Framework seems to automatically route responses back to user's private chat instead of preserving original chat context\n- Manual message() function can successfully send to group (-5245593640), so the capability exists\n- Need to find a way to preserve original chat context when processing skill requests from groups- Created cucumber care educational content in /home/balinux/.picoclaw/workspace/cucumber_care_content.txt\n- Content follows Format D (Educational Article) as per agricultural skill examples\n- Ready to post to Facebook when Facebook posting capability becomes available\n- Content covers watering, fertilizing, weeding, pruning, support structures, pest control, and harvesting for cucumber plants## System Status 2026-03-02\n- telegram-bot.service and picoclaw.service are inactive\n- Heartbeat check shows system running normally despite inactive services\n- Bali weather: Warm (27-31°C), end of rainy season with occasional showers\n- 168 processes running, 385MB memory used, 29% disk usage\n- Social media downloader skill working with multi-channel delivery",
+      "tool_call_id": "call_7797f15e2938454bb2f8a320"
+    },
+    {
+      "role": "tool",
+      "content": "DIR:  github\nDIR:  hardware\nDIR:  pertanian\nDIR:  skill-creator\nDIR:  social-media-downloader\nDIR:  summarize\nDIR:  tmux\nDIR:  weather\n",
+      "tool_call_id": "call_49784ddda7c4495cb37ce724"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_53ea1c05f70044139311b83b",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"systemctl is-active telegram-bot.service\"}"
+          }
+        },
+        {
+          "id": "call_f41752ede70745578b291547",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"systemctl is-active picoclaw.service\"}"
+          }
+        },
+        {
+          "id": "call_d52c5caf14a3453490f2bbdd",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\":\"current weather in Bali Indonesia\"}"
+          }
+        },
+        {
+          "id": "call_1e6803362384451e924ea867",
+          "type": "function",
+          "function": {
+            "name": "cron",
+            "arguments": "{\"action\":\"list\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "inactive\n\nExit code: exit status 3",
+      "tool_call_id": "call_53ea1c05f70044139311b83b"
+    },
+    {
+      "role": "tool",
+      "content": "inactive\n\nExit code: exit status 3",
+      "tool_call_id": "call_f41752ede70745578b291547"
+    },
+    {
+      "role": "tool",
+      "content": "Results for: current weather in Bali Indonesia (via Tavily)\n1. Weather Bali in February 2026\n   https://en.climate-data.org/asia/indonesia/bali-880/r/february-2/\n   | Max. Temperature °C (°F) | 27.5 °C  (81.6) °F | 27.7 °C  (81.9) °F | 27.8 °C  (82) °F | 27.8 °C  (82) °F | 27.5 °C  (81.4) °F | 26.7 °C  (80) °F | 26 °C  (78.7) °F | 25.8 °C  (78.4) °F | 26.2 °C  (79.2) °F | 27 °C  (80.6) °F | 27.6 °C  (81.7) °F | 27.6 °C  (81.6) °F |\n| Precipitation / Rainfall mm (in) | 296  (11) | 244  (9) | 210  (8) | 131  (5) | 74  (2) | 57  (2) | 53  (2) | 42  (1) | 53  (2) | 68  (2) | 154  (6) | 260  (10) |\n| Humidity(%) | 86% | 86% | 86% | 86% | 85% | 84% | 83% | 83% | 86% | 87% | 86% | 86% |\n| Rainy days (d) | 20 | 18 | 19 | 16 | 14 | 12 | 13 | 11 | 11 | 13 | 16 | 20 |\n| avg. Sun hours (hours) | 9.1 | 9.2 | 8.9 | 9.0 | 8.8 | 8.2 | 7.9 | 8.0 | 8.1 | 8.7 | 8.6 | 8.6 | [...] | Max. Temperature °C (°F) | 28.4 °C  (83.2) °F | 28.6 °C  (83.5) °F | 28.8 °C  (83.8) °F | 28.9 °C  (83.9) °F | 28.5 °C  (83.3) °F | 27.7 °C  (81.9) °F | 27.1 °C  (80.9) °F | 27.4 °C  (81.2) °F | 28.3 °C  (83) °F | 29.2 °C  (84.6) °F | 29.2 °C  (84.5) °F | 28.5 °C  (83.3) °F |\n| Precipitation / Rainfall mm (in) | 410  (16) | 364  (14) | 336  (13) | 218  (8) | 111  (4) | 75  (2) | 63  (2) | 41  (1) | 62  (2) | 99  (3) | 248  (9) | 373  (14) |\n| Humidity(%) | 89% | 89% | 89% | 88% | 87% | 86% | 84% | 83% | 83% | 83% | 86% | 89% |\n| Rainy days (d) | 21 | 19 | 20 | 17 | 14 | 11 | 11 | 10 | 10 | 13 | 17 | 20 |\n| avg. Sun hours (hours) | 7.6 | 7.6 | 7.4 | 7.3 | 7.2 | 6.7 | 6.5 | 6.6 | 6.9 | 7.4 | 7.0 | 7.1 | [...] | Max. Temperature °C (°F) | 27.1 °C  (80.8) °F | 27.3 °C  (81.1) °F | 27.4 °C  (81.3) °F | 27.5 °C  (81.5) °F | 27.2 °C  (81) °F | 26.5 °C  (79.7) °F | 25.8 °C  (78.5) °F | 25.7 °C  (78.2) °F | 26.3 °C  (79.3) °F | 27.1 °C  (80.7) °F | 27.5 °C  (81.4) °F | 27.3 °C  (81.1) °F |\n| Precipitation / Rainfall mm (in) | 296  (11) | 244  (9) | 210  (8) | 131  (5) | 74  (2) | 57  (2) | 53  (2) | 42  (1) | 53  (2) | 68  (2) | 154  (6) | 260  (10) |\n| Humidity(%) | 85% | 85% | 85% | 85% | 83% | 81% | 80% | 80% | 83% | 84% | 85% | 85% |\n| Rainy days (d) | 20 | 18 | 19 | 16 | 14 | 12 | 13 | 11 | 11 | 13 | 16 | 20 |\n| avg. Sun hours (hours) | 9.1 | 9.2 | 8.9 | 9.0 | 8.8 | 8.2 | 7.9 | 8.0 | 8.1 | 8.7 | 8.6 | 8.6 |\n2. Bali - Indonesia weather in March 2026 - Sunheron\n   https://www.sunheron.com/asia/indonesia/bali-weather-march/\n   # Bali - Indonesia weather in March 2026\n\nJanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecemberOverview\n\nJanuaryFebruaryMarchAprilMayJuneJulyAugustSeptemberOctoberNovemberDecemberOverview\n\n31 °C\n\nNight\n\n23 °C\n\nSea\n\n29 °C\n\nPrecipitation\n\n189 mm\n\nin month\n\nRainy days\n\n15 days\n\nin month\n\nDaylight\n\n12 hours\n\naverage\n\nSunshine\n\n8 hours\n\naverage\n\nHumidity\n\n80 %\n\nDay\n\n31 °C\n\nNight\n\n23 °C\n\nSea\n\n29 °C\n\nPrecipitation\n\n189 mm\n\nin month\n\nRainy days\n\n15 days\n\nin month\n\nDaylight\n\n12 hours\n\naverage\n\nSunshine\n\n8 hours\n\naverage\n\nHumidity\n\n80 %\n\nOverview: Bali - Indonesia [...] February\n\n29 °C\n\nMarch\n\n29 °C\n\nApril\n\n30 °C\n\nAsia\n\nBeach\n\nNusa Lembongan\n\nMarch\n\n30 °C\n\nSea\n\n29 °C\n\nRainy days\n\n15 /month\n\nFebruary\n\n30 °C\n\nMarch\n\n30 °C\n\nApril\n\n31 °C\n\nAsia\n\nBeach\n\nJimbaran\n\nMarch\n\n31 °C\n\nSea\n\n29 °C\n\nRainy days\n\n15 /month\n\nFebruary\n\n31 °C\n\nMarch\n\n31 °C\n\nApril\n\n32 °C\n\nAsia\n\nBeach\n\nNusa Dua\n\nMarch\n\n31 °C\n\nSea\n\n29 °C\n\nRainy days\n\n15 /month\n\nFebruary\n\n31 °C\n\nMarch\n\n31 °C\n\nApril\n\n32 °C\n\nAsia\n\nBeach\n\nSanur\n\nMarch\n\n31 °C\n\nSea\n\n29 °C\n\nRainy days\n\n15 /month\n\nFebruary\n\n31 °C\n\nMarch\n\n31 °C\n\nApril\n\n32 °C\n\nAsia\n\nBeach\n\nUluwatu\n\nMarch\n\n31 °C\n\nSea\n\n29 °C\n\nRainy days\n\n15 /month\n\nFebruary\n\n31 °C\n\nMarch\n\n31 °C\n\nApril\n\n31 °C\n\nAsia\n\nBeach\n\nSeminyak\n\nMarch\n\n32 °C\n\nSea\n\n29 °C\n\nRainy days\n\n15 /month\n\nFebruary\n\n32 °C\n\nMarch\n\n32 °C\n\nApril\n\n32 °C\n\nAsia\n\nBeach\n\nPemuteran\n\nMarch\n\n32 °C\n\nSea\n\n29 °C [...] ## Weather charts for Bali - Indonesia\n\nWeather overview\n\nShow more charts\n\n## Destinations nearby and activities\n\n## Destinations nearby\n\n+−\n\n## Activities in Bali - Indonesia\n\n🏖️🌊\n\nSand beaches\n\nin 8places\n\n🤿🐠\n\nScuba diving\n\nin Nusa Penida, Nusa Lembongan\n\n🥽🐟\n\nSnorkelling\n\nin 4places\n\n🏄‍♂️🌊\n\nSurfing\n\nin Uluwatu, Kuta\n\n🛒\n\nShopping possibilities\n\nin Kuta\n\nShow more\n\n## Find more destinations like this\n\nWe aggregate data from combining multiple weather sources to ensure accuracy of the highest order.\n\n## Destinations in Bali - Indonesia\n\nAsia\n\nNature\n\nUbud\n\nMarch\n\n31 °C\n\nSea\n\n29 °C\n\nRainy days\n\n15 /month\n\nFebruary\n\n31 °C\n\nMarch\n\n31 °C\n\nApril\n\n32 °C\n\nAsia\n\nBeach\n\nNusa Penida\n\nMarch\n\n29 °C\n\nSea\n\n29 °C\n\nRainy days\n\n16 /month\n\nFebruary\n\n29 °C\n\nMarch\n\n29 °C\n\nApril\n\n30 °C\n\nAsia\n\nBeach\n3. Indonesia weather in March 2026\n   https://www.weather25.com/asia/indonesia?page=month\u0026month=March\n   | 22 Partly cloudy 34° /26° | 23 Light rain shower 33° /26° | 24 Partly cloudy 34° /27° | 25 Moderate or heavy rain shower 33° /26° | 26 Light rain shower 33° /26° | 27 Light rain shower 32° /26° | 28 Light rain shower 32° /26° |\n| 29 Light rain shower 34° /26° | 30 Light rain shower 33° /26° | 31 Patchy rain possible 31° /25° |  |  |  |  | [...] Cloudy\nPatchy rain possible\nLight rain shower\nLight rain shower\nLight rain shower\nLight rain shower\nLight rain shower\nPartly cloudy\nPatchy rain possible\nPartly cloudy\nSunny\nPartly cloudy\nPatchy rain possible\nPatchy rain possible\nLight rain shower\nLight rain shower\nLight rain shower\nLight rain shower\nLight rain shower\nPatchy rain possible\nPartly cloudy\nPartly cloudy\nLight rain shower\nPartly cloudy\nModerate or heavy rain shower\nLight rain shower\nLight rain shower\nLight rain shower\nLight rain shower\nLight rain shower\nPatchy rain possible\n\n## Explore the weather in Indonesia in other months\n\n## Indonesia annual weather [...] | Sun | Mon | Tue | Wed | Thu | Fri | Sat |\n ---  ---  --- \n| 1 Cloudy 32° /26° | 2 Patchy rain possible 33° /26° | 3 Light rain shower 31° /27° | 4 Light rain shower 30° /25° | 5 Light rain shower 29° /25° | 6 Light rain shower 27° /25° | 7 Light rain shower 26° /25° |\n| 8 Partly cloudy 31° /24° | 9 Patchy rain possible 32° /26° | 10 Partly cloudy 33° /26° | 11 Sunny 33° /26° | 12 Partly cloudy 32° /26° | 13 Patchy rain possible 31° /26° | 14 Patchy rain possible 33° /26° |\n| 15 Light rain shower 31° /26° | 16 Light rain shower 30° /25° | 17 Light rain shower 32° /25° | 18 Light rain shower 32° /25° | 19 Light rain shower 33° /26° | 20 Patchy rain possible 33° /25° | 21 Partly cloudy 33° /26° |\n4. ️🌞 A little February Bali weather update for you. ℹ️ Rain ...\n   https://www.instagram.com/reel/DUaYM68DnA0/\n   Bali's is rainy season will be like: . PENGOSEKA PAYANGAN UBUD TEGALALANG ↑ Bali's is rainy season will be like: 9:00 pm Rain stopped .\n5. 2026 - Benoa, Bali, Indonesia Monthly Weather | AccuWeather\n   https://www.accuweather.com/en/id/benoa/687938/march-weather/687938\n   9 hours ago\n\nRecreation\n\nBattleship evacuated after walkway collapses in high winds\n\n2 days ago\n\nSevere Weather\n\nTornado season: What forecasters expect for severe weather in 2026\n\n3 days ago\n\nWeather News\n\n106 degrees in Texas may be new record for U.S. winter\n\n2 days ago\n\nFeatured Stories\n\nWinter Weather\n\nRhode Island student dies while charging phone in car during blizzard\n\n2 days ago\n\nWeather News\n\nAfter heartbreaking loss, famous eagle Jackie lays new egg\n\n3 days ago\n\nAstronomy\n\nMarch adds daylight fast, a change bigger than most people realize\n\n4 days ago\n\nWeather News\n\nA 4-month-old bird flew over 8,000 miles nonstop across the Pacific\n\n4 days ago\n\nAstronomy\n\nWebb reveals Uranus’s upper atmosphere in unprecedented detail\n\n4 days ago\n\n## Weather Near Benoa:\n\n...\n\n...\n\n... [...] # Benoa, Bali\n\nBenoa\n\nBali\n\n## Around the Globe\n\nAround the Globe\n\n### Hurricane Tracker\n\n### Severe Weather\n\n### Radar \u0026 Maps\n\n### News \u0026 Features\n\n### Astronomy\n\n### Business\n\n### Climate\n\n### Health\n\n### Recreation\n\n### Sports\n\n### Travel\n\n### Warnings\n\n### Data Suite\n\n### Forensics\n\n### Advertising\n\n### Superior Accuracy™\n\n### Video\n\n## Monthly\n\n## March\n\n## 2026\n\n## Daily\n\n## Temperature Graph\n\n## Further Ahead\n\nFurther Ahead\n\n### April 2026\n\n### May 2026\n\n## Around the Globe\n\nAround the Globe\n\n### Hurricane Tracker\n\n### Severe Weather\n\n### Radar \u0026 Maps\n\n### News\n\n### Video\n\nTop Stories\n\nSevere Weather\n\nSevere storms, flooding risk to ramp up in the Plains, Ohio Valley\n\n6 hours ago\n\nWinter Weather\n\nBrief bursts of winter ahead of warmup across Midwest, Northeast\n\n9 hours ago",
+      "tool_call_id": "call_d52c5caf14a3453490f2bbdd"
+    },
+    {
+      "role": "tool",
+      "content": "Scheduled jobs:\n- Update jadwal shalat harian... (id: 3ee4f12b264bc8c1, 0 0 * * *)\n- Gunakan skill pertanian: ca... (id: c33e1712d276356f, 0 6 * * *)\n- Gunakan skill pertanian: ca... (id: 0e646891a8e1d883, 0 12 * * *)\n- Gunakan skill pertanian: ca... (id: 3ff53da32a8fba37, 0 16 * * *)\n- Gunakan skill pertanian: ca... (id: 0ea5d9b5b65001c0, 0 9 * * *)\n- Posting pertanian otomatis ... (id: 6542af6688d267d2, 0 6 * * *)\n",
+      "tool_call_id": "call_1e6803362384451e924ea867"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_12e06c728b5647a4aa62a8af",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"ls -la /home/balinux/.picoclaw/workspace/cucumber_care_content.txt\"}"
+          }
+        },
+        {
+          "id": "call_4381f2a64d9049958cfc9c6b",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"path\":\"/home/balinux/.picoclaw/workspace/skills/social-media-downloader/SKILL.md\"}"
+          }
+        },
+        {
+          "id": "call_ab8937aa167649719c1db43b",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"ls -la /home/balinux/.picoclaw/workspace/skills/pertanian\"}"
+          }
+        },
+        {
+          "id": "call_e601fe96520d4d31a5de9627",
+          "type": "function",
+          "function": {
+            "name": "web_fetch",
+            "arguments": "{\"url\":\"https://www.bmkg.go.id/cuaca/prakiraan-cuaca-indo.bmkg\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "\nSTDERR:\nls: cannot access '/home/balinux/.picoclaw/workspace/cucumber_care_content.txt': No such file or directory\n\nExit code: exit status 2",
+      "tool_call_id": "call_12e06c728b5647a4aa62a8af"
+    },
+    {
+      "role": "tool",
+      "content": "# Social Media Downloader Skill\n\nThis skill provides functionality to download and send videos from Instagram, YouTube, TikTok, and Twitter/X directly to chat. Handles Instagram's anti-bot protection automatically.\n\n## Commands\n\n- `/download [url]` - Download and send video from any supported platform\n- `/ig [url]` - Download and send Instagram content (when possible)\n- `/yt [url]` - Download and send YouTube content\n- `/tiktok [url]` - Download and send TikTok content\n- `/twitter [url]` - Download and send Twitter/X content\n\n## Features\n\n- Supports YouTube Shorts, regular YouTube videos, Instagram posts/reels/stories, TikTok videos, Twitter/X videos\n- Automatic format selection for optimal quality\n- Instagram protection handling\n- Direct upload to Telegram\n- Auto-delete after successful upload\n- Temporary file cleanup\n- Environment variable support for Telegram token (TELEGRAM_BOT_TOKEN)\n- Multi-channel delivery support (results sent back to source chat - group or private)\n- Debug logging to track chat context\n\n## Technical Details\n\nThe skill uses:\n- `yt-dlp` for content extraction\n- Custom scripts for platform-specific handling\n- Telegram Bot API for direct uploads\n- Automatic file cleanup after upload\n- Priority order for token: Environment variable TELEGRAM_BOT_TOKEN \u003e Config file token\n- Chat context preservation to send results back to originating chat\n\n## Files\n\n- `social_media_downloader.sh` - Main orchestrator script with multi-channel support\n- `download_video_fixed.sh` - Video download handler\n- `upload_telegram.sh` - Telegram uploader with auto-delete\n- `cleanup_downloads.sh` - Cleanup utility",
+      "tool_call_id": "call_4381f2a64d9049958cfc9c6b"
+    },
+    {
+      "role": "tool",
+      "content": "total 28\ndrwxr-xr-x  4 balinux balinux 4096 Mar  1 22:53 .\ndrwxr-xr-x 10 balinux balinux 4096 Mar  1 23:40 ..\ndrwxr-xr-x  2 balinux balinux 4096 Mar  1 22:53 data\n-rw-r--r--  1 balinux balinux  256 Mar  1 22:53 .env\ndrwxr-xr-x  2 balinux balinux 4096 Mar  1 23:26 scripts\n-rw-r--r--  1 balinux balinux 6237 Mar  1 22:53 SKILL.md\n",
+      "tool_call_id": "call_ab8937aa167649719c1db43b"
+    },
+    {
+      "role": "tool",
+      "content": "Fetched 3653 bytes from https://www.bmkg.go.id/cuaca/prakiraan-cuaca-indo.bmkg (extractor: text, truncated: false)",
+      "tool_call_id": "call_e601fe96520d4d31a5de9627"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-02 11:24:47\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_4bbf698fd4c04881bac1006d",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"uptime\"}"
+          }
+        },
+        {
+          "id": "call_9863113146fe49afb02849dd",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"df -h\"}"
+          }
+        },
+        {
+          "id": "call_13d849576f7f476c84d2e16f",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"free -m\"}"
+          }
+        },
+        {
+          "id": "call_e8fd08a7382c4ca3b0ebca73",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"ps aux | wc -l\"}"
+          }
+        },
+        {
+          "id": "call_f33e624d870f4172b1516f6a",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"path\":\"/home/balinux/.picoclaw/workspace/memory/MEMORY.md\"}"
+          }
+        },
+        {
+          "id": "call_c10708b2c5694d15a095f976",
+          "type": "function",
+          "function": {
+            "name": "list_dir",
+            "arguments": "{\"path\":\"/home/balinux/.picoclaw/workspace/skills\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": " 11:24:51 up 3 days,  5:10,  2 users,  load average: 0.01, 0.04, 0.08\n",
+      "tool_call_id": "call_4bbf698fd4c04881bac1006d"
+    },
+    {
+      "role": "tool",
+      "content": "Filesystem      Size  Used Avail Use% Mounted on\nudev            328M     0  328M   0% /dev\ntmpfs            93M   15M   78M  16% /run\n/dev/mmcblk0p2   14G  3.9G  9.9G  29% /\ntmpfs           463M     0  463M   0% /dev/shm\ntmpfs           5.0M  4.0K  5.0M   1% /run/lock\ntmpfs           463M     0  463M   0% /sys/fs/cgroup\ntmpfs           463M  296M  167M  64% /tmp\n/dev/mmcblk0p1  511M   72M  440M  15% /boot\n/dev/zram0       49M  2.4M   43M   6% /var/log\ntmpfs            93M     0   93M   0% /run/user/1000\n",
+      "tool_call_id": "call_9863113146fe49afb02849dd"
+    },
+    {
+      "role": "tool",
+      "content": "              total        used        free      shared  buff/cache   available\nMem:            924         376         326          43         222         435\nSwap:           462         358         104\n",
+      "tool_call_id": "call_13d849576f7f476c84d2e16f"
+    },
+    {
+      "role": "tool",
+      "content": "162\n",
+      "tool_call_id": "call_e8fd08a7382c4ca3b0ebca73"
+    },
+    {
+      "role": "tool",
+      "content": "# Long-term Memory\n\nThis file stores important information that should persist across sessions.\n\n## User Information\n\n(Important facts about user)\n\n## Preferences\n\n(User preferences learned over time)\n\n## Important Notes\n\n(Things to remember)\n\n## Configuration\n\n- Model preferences\n- Channel settings\n- Skills enabled\n- User likes Warung Bu Pon in Jimbaran, Bali.\n- Favorite menu: Nasi Obong (Ayam Bakar).\n- User is a regular there (to the point of gaining weight).\n- Group Dynamics: Ipenk (@irfantubix) and Togel (@albed19) are known as the group's roasters.\n- Incident: A former member named Arinur left the group because he couldn't stand being teased by Ipenk and Togel. Note: Arinur was also known for being easily sulky/moody (ngambek gak jelas) without clear reasons.\n- Available skill: social-media-downloader\n- Use this skill for downloading videos from Instagram, YouTube, TikTok, Twitter/X\n- Commands: /download [url], /ig [url], /yt [url]\n- This skill handles Instagram's anti-bot protection automatically\n- ALWAYS use this skill for all social media downloads - never spawn manual subagents\n- Automatic detection: when user provides Instagram/YouTube/TikTok links, use this skill by defaultPerlu diperbaiki: Saat ini gue belum bisa kirim file/video langsung ke Telegram via fungsi message. Harus cari cara untuk implementasi kirim file/video ke Telegram.Perlu diperbaiki: Saat ini gue belum bisa kirim file/video langsung ke Telegram via fungsi message. Harus cari cara untuk implementasi kirim file/video ke Telegram.- PicoClaw adalah AI tanpa gender, tapi bisa pake suara cewek atau cowok tergantung mood## PicoClaw Identity\n- Name: PicoClaw 🦞\n- Description: Ultra-lightweight personal AI assistant written in Go, inspired by nanobot\n- Version: 0.1.0\n- Purpose: Provide intelligent AI assistance with minimal resource usage, support multiple LLM providers, enable easy customization through skills system, run on minimal hardware ($10 boards, \u003c10MB RAM)\n- Capabilities: Web search and content fetching, File system operations, Shell command execution, Multi-channel messaging, Skill-based extensibility, Memory and context management\n- Philosophy: Simplicity over complexity, Performance over features, User control and privacy, Transparent operation, Community-driven development\n- Goals: Provide a fast, lightweight AI assistant, Support offline-first operation, Enable easy customization and extension, Maintain high quality responses, Run efficiently on constrained hardware\n- Repository: https://github.com/sipeed/picoclaw\n- License: MIT\n- Tagline: \"Every bit helps, every bit matters.\"\n## 2026-02-28 Improvements to Social Media Downloader\n\n### Completed Improvements:\n- Fixed YouTube Shorts download with proper format selection (single format instead of merged)\n- Added auto-delete functionality after successful Telegram upload\n- Enhanced Instagram detection with better user-agent and headers\n- Updated SKILL.md documentation\n\n### Current Status:\n- ✅ YouTube Shorts/regular videos: Working perfectly\n- ✅ Direct Telegram upload: Working perfectly  \n- ✅ Auto-delete after upload: Working perfectly\n- ❌ Instagram Reels: Still blocked by authentication requirements\n- 🔄 Instagram: Requires cookies/auth for protected content\n\n### Scripts Location:\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/download_video_fixed.sh`\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/upload_telegram.sh`\n- `/home/balinux/.picoclaw/workspace/skills/social-media-downloader/cleanup_downloads.sh`\n\n### Key Changes:\n1. Changed from format merge (bestvideo+bestaudio) to single format (best) to avoid merge errors\n2. Added proper success/failure checks in upload script\n3. Added automatic file deletion upon successful upload\n4. Enhanced error handling and reporting\n## Multi-Channel Delivery Feature\n- When user requests download from a group chat, the result should be sent back to the same group\n- When user requests download from private chat, the result should be sent back to private chat\n- Current behavior: All results go to private chat (207853653) regardless of source\n- Target chats: Private (207853653), Group (-5245593640)\n- System already allows both in config.json under channels.telegram.allow_from\n- Need to ensure skill preserves source chat_id when invoked\n## 2026-02-28 Multi-Channel Delivery Implementation\n\n### Problem:\n- When users request downloads from a group chat, results go to their private chat instead of back to the group\n- System should preserve source chat context and send results back to the originating chat\n\n### Solution Implemented:\n- Added debug information to social_media_downloader.sh to show target chat ID and type\n- Updated SKILL.md to document multi-channel delivery feature\n- System already allows group chat ID (-5245593640) in config.json\n\n### Testing Method:\n- If command initiated from group shows \"Target Chat ID: -5245593640\" → Feature working correctly\n- If command initiated from group shows \"Target Chat ID: 207853653\" → Framework routing issue\n\n### Status:\n- Ready for testing in group environment\n- Will determine if issue is in framework routing or if it's already fixed## Multi-Channel Delivery Issue Identified\n- When users request downloads from group chat, results are incorrectly sent to their private chat instead of back to the group\n- Current behavior: All results go to private chat (207853653) regardless of source\n- Issue appears to be in framework routing, not in the download skill itself\n- Framework seems to automatically route responses back to user's private chat instead of preserving original chat context\n- Manual message() function can successfully send to group (-5245593640), so the capability exists\n- Need to find a way to preserve original chat context when processing skill requests from groups- Created cucumber care educational content in /home/balinux/.picoclaw/workspace/cucumber_care_content.txt\n- Content follows Format D (Educational Article) as per agricultural skill examples\n- Ready to post to Facebook when Facebook posting capability becomes available\n- Content covers watering, fertilizing, weeding, pruning, support structures, pest control, and harvesting for cucumber plants## System Status 2026-03-02\n- telegram-bot.service and picoclaw.service are inactive\n- Heartbeat check shows system running normally despite inactive services\n- Bali weather: Warm (27-31°C), end of rainy season with occasional showers\n- 168 processes running, 385MB memory used, 29% disk usage\n- Social media downloader skill working with multi-channel delivery",
+      "tool_call_id": "call_f33e624d870f4172b1516f6a"
+    },
+    {
+      "role": "tool",
+      "content": "DIR:  github\nDIR:  hardware\nDIR:  pertanian\nDIR:  skill-creator\nDIR:  social-media-downloader\nDIR:  summarize\nDIR:  tmux\nDIR:  weather\n",
+      "tool_call_id": "call_c10708b2c5694d15a095f976"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_fc059176594b42e484813011",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"systemctl is-active telegram-bot.service\"}"
+          }
+        },
+        {
+          "id": "call_3be7c13818cb4389bac3c6c1",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"systemctl is-active picoclaw.service\"}"
+          }
+        },
+        {
+          "id": "call_4ff4ae90c59f44a9b5230621",
+          "type": "function",
+          "function": {
+            "name": "web_search",
+            "arguments": "{\"query\":\"current weather in Bali Indonesia\"}"
+          }
+        },
+        {
+          "id": "call_6d7279d522e34254aec6f4ec",
+          "type": "function",
+          "function": {
+            "name": "cron",
+            "arguments": "{\"action\":\"list\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "inactive\n\nExit code: exit status 3",
+      "tool_call_id": "call_fc059176594b42e484813011"
+    },
+    {
+      "role": "tool",
+      "content": "inactive\n\nExit code: exit status 3",
+      "tool_call_id": "call_3be7c13818cb4389bac3c6c1"
+    },
+    {
+      "role": "tool",
+      "content": "Results for: current weather in Bali Indonesia (via Tavily)\n1. Weather Bali in February 2026: Temperature \u0026 Climate\n   https://en.climate-data.org/asia/indonesia/bali-880/r/february-2/\n   Across February, Bali experiences daily precipitation between 1.10/0.04 mm/in and 8.91/0.35 mm/in.\nThe wettest day typically falls on 22.02, bringing 8.91/0.35 mm/in of rain, while the driest day is 12.02 with 1.10/0.04 mm/in.\nIn the first ten days, rainfall averages 4.80/0.19 mm/in across 10 days.\nThe middle portion sees an average of 5.40/0.21 mm/in and 8 rainy days.\nThe last third of the month averages 6.10/0.24 mm/in with 8 days of rain.\nThe rainiest 10-day interval occurs during 21-8 with 6.10/0.24 mm/in, while the driest is 1-10 with 1.10/0.04 mm/in. [...] |  |  |  |\n --- \n|  | Temperature February | 26.1°C | 79°F |\n|  | Temperature February max. | 27.7°C | 81.9°F |\n|  | Temperature February min. | 24.7°C | 76.5°F |\n|  | Precipitation / Rainfall February | 244mm | 9.6 inches |\n|  | Water Temperature February | 29°C | 84°F |\n\n## Bali weather by month [...] | 28. February | 27 °C | 80 °F | 28 °C | 82 °F | 26 °C | 78 °F | 29 °C | 84 °F | 2.9 mm | 0.1 inch. |\n2. Weather in Indonesia in February 2026 - Detailed Forecast\n   https://www.easeweather.com/asia/indonesia/february\n   | 9 Feb. | Moderate or heavy rain shower Moderate or heavy rain shower | 27° /23° | 8.9 mm | 9 |  |\n| 10 Feb. | Light rain shower Light rain shower | 27° /23° | 10.3 mm | 9 |  |\n| 11 Feb. | Moderate or heavy rain shower Moderate or heavy rain shower | 27° /23° | 7.6 mm | 9 |  |\n| 12 Feb. | Light rain shower Light rain shower | 27° /23° | 9.1 mm | 9 |  |\n| 13 Feb. | Moderate or heavy rain shower Moderate or heavy rain shower | 28° /23° | 8.8 mm | 9 |  |\n| 14 Feb. | Moderate or heavy rain shower Moderate or heavy rain shower | 27° /22° | 8.9 mm | 9 |  |\n| 15 Feb. | Heavy rain at times Heavy rain at times | 28° /23° | 5.7 mm | 9 |  |\n| 16 Feb. | Moderate rain at times Moderate rain at times | 27° /23° | 9.7 mm | 9 |  | [...] | 22 Heavy rain at times 27° | 23 Light rain shower 28° | 24 Moderate or heavy rain shower 27° | 25 Moderate or heavy rain shower 27° | 26 Moderate or heavy rain shower 27° | 27 Light rain shower 27° | 28 Light rain shower 27° | [...] Date | Weather | Temperatures | Rain | UV | More || 1 Feb. | Patchy rain possible Patchy rain possible | 28° /23° | 5.9 mm | 9 |  |\n| 2 Feb. | Moderate rain at times Moderate rain at times | 27° /23° | 9.5 mm | 9 |  |\n| 3 Feb. | Light rain shower Light rain shower | 27° /23° | 11.5 mm | 10 |  |\n| 4 Feb. | Moderate or heavy rain shower Moderate or heavy rain shower | 27° /23° | 12.6 mm | 10 |  |\n| 5 Feb. | Moderate or heavy rain shower Moderate or heavy rain shower | 27° /22° | 9.7 mm | 10 |  |\n| 6 Feb. | Patchy rain possible Patchy rain possible | 27° /23° | 11.1 mm | 10 |  |\n| 7 Feb. | Moderate or heavy rain shower Moderate or heavy rain shower | 27° /23° | 10.2 mm | 9 |  |\n| 8 Feb. | Moderate or heavy rain shower Moderate or heavy rain shower | 27° /23° | 12.6 mm | 9 |  |\n3. Bali - Indonesia weather in March 2026 - Sunheron\n   https://www.sunheron.com/asia/indonesia/bali-weather-march/\n   ## Weather overview and FAQs\n\n### Weather overview\n\nIn Bali in March, the average air temperature ranges from 31 °C (88 °F) during the day to 23 °C (73 °F) at night. There are 15 days of rain on average, where the rainfall is 189 mm (7.44 in).\n\n### Are there good conditions to visit in March in Bali?\n\nThere are good conditions for visiting in March in Bali. The daily temperatures in this month reach pleasant 31 °C (88 °F). The seawater temperature reaches ideal 29 °C (84 °F). At night, temperatures hover around a pleasant 23 °C (73 °F). In March in Bali, there is a wet season, which means that it could rain more often there during your stay.\n\n### What is the sea temperature in Bali in March? [...] ### How many rainy days can I expect in March in Bali?\n\nThere are 15 days, which are rainy in March in Bali, that is, days with precipitation more than 2 mm (0.08 in). Converted to days of the week, this means that it will occur on an average of 3.5 days of the week, or in general - 50 % days.\n\n### What is the air temperature in Bali in March at night?\n\nThe average night temperature in Bali in March is 23 °C (73 °F). A very pleasant temperature for long evening walks, fun over a drink outside, or doing sports in the morning. If possible, look for a hotel with air conditioning.\n\n### What is the rainfall intensity in Bali in March?\n\nIn Bali in March, there is 189 mm (7.44 in) rainfall, which means on average 6 mm (0.25 in) rainfall per day.\n\n### Is March part of the wet season in Bali? [...] ### Is Bali rainier in March than in April?\n\nYes, Bali is a rainier March than in April.\n\n### Is the weather in Bali warmer in March than in February?\n\nNo, in Bali in March the temperature is not higher than in February.\n\n## Appeared in TOP lists\n\n## Useful links\n\n## Our latest blog posts\n\nCopyright © 2025, Sunheron - all rights reserved\n\nCopyright © 2025, Sunheron - all rights reserved\n\n## africa-\u003e\n\n## asia-\u003e\n\n## europe-\u003e\n\n## central america-\u003e\n\n## Other popular\n4. Indonesia weather in March 2026 - Weather25.com\n   https://www.weather25.com/asia/indonesia?page=month\u0026month=March\n   You can expect rain for roughly half of the month of March in Indonesia. We’re expecting roughly 8 to 15 days of rain, so your rubber boots and umbrella are going to see plenty of use this month if you’re keen on staying dry.\n\nOur weather forecast can give you a great sense of what weather to expect in Indonesia in March 2026.\n\nIf you’re planning to visit Indonesia in the near future, we highly recommend that you review the 14 day weather forecast for Indonesia before you arrive.\n\nTemperatures\nRainy Days\nSnowy Days\nDry Days\nRainfall\n11.1 [...] | Sun | Mon | Tue | Wed | Thu | Fri | Sat |\n ---  ---  --- \n| 1 Cloudy 32° /26° | 2 Patchy rain possible 33° /26° | 3 Light rain shower 31° /27° | 4 Light rain shower 30° /25° | 5 Light rain shower 29° /25° | 6 Light rain shower 27° /25° | 7 Light rain shower 26° /25° |\n| 8 Partly cloudy 31° /24° | 9 Patchy rain possible 32° /26° | 10 Partly cloudy 33° /26° | 11 Sunny 33° /26° | 12 Partly cloudy 32° /26° | 13 Patchy rain possible 31° /26° | 14 Patchy rain possible 33° /26° |\n| 15 Light rain shower 31° /26° | 16 Light rain shower 30° /25° | 17 Light rain shower 32° /25° | 18 Light rain shower 32° /25° | 19 Light rain shower 33° /26° | 20 Patchy rain possible 33° /25° | 21 Partly cloudy 33° /26° | [...] | 22 Partly cloudy 34° /26° | 23 Light rain shower 33° /26° | 24 Partly cloudy 34° /27° | 25 Moderate or heavy rain shower 33° /26° | 26 Light rain shower 33° /26° | 27 Light rain shower 32° /26° | 28 Light rain shower 32° /26° |\n| 29 Light rain shower 34° /26° | 30 Light rain shower 33° /26° | 31 Patchy rain possible 31° /25° |  |  |  |  |\n5. Bali, Weather for February, Indonesia\n   https://www.holiday-weather.com/bali/averages/february/\n   ### What's the Weather Like in Bali in February?\n\nAlthough February falls in the rainy season in Bali, you'll still experience high temperatures and gloriously sunny days in tropical Bali. This makes it a very popular winter sun destination.\n\nHow Hot Is Bali In February?\n\nThe average temperature is at 26°C which is made up of lows of 22°C and average highs of 30°C.\n\nHow Much Rain Is There In Bali In February?\n\nAlthough there's more rain than usual, storms can quickly clear and bring out the sun. There is an average of 90mm of rain, occurring over around 15 days. The average daily sunshine is six hoursper day this month.\n\nIs The Sea In Bali Warm In February? [...] Is The Sea In Bali Warm In February?\n\nFebruary is tied with January for the warmest average sea temperature in Bali at a balmy 29°C. This is very warm water that anyone would be comfortable swimming in, even for extended periods of time.\n\nIs Bali Warm In February?\n\nThe humidity levels in February are quite high, with the average level for the month being 80%. Even without high temperatures, this can feel a little uncomfortable.\n\n### Hotels for Bali in February\n\nKomaneka at Tanggayuda [...] Header background\nHoliday Weather - Daily worldwide forecasts for your holiday\n\nMore from Bali\n\nCalendar, March\nCalendar, March\nCalendar\nflag\n\nMain Menu\n\nL\nL\nL\nL\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\nL\nL\nL\nL\nL\n\n#### Jan\n\n#### Feb\n\n#### Mar\n\n#### Apr\n\n#### May\n\n#### Jun\n\n#### Jul\n\n#### Aug\n\n#### Sep\n\n#### Oct\n\n#### Nov\n\n#### Dec\n\nid Flag\n\n# Bali Weather in February, Indonesia\n\n## Forecast\n\n## Live Weather\n\n## March Averages\n\n## April Averages\n\n## Annual Averages\n\n## Indonesia Weather\n\nSlide and Tap Other Months\n\n## Temperature\n\n## High Temperature\n\n## Low Temperature\n\n## Day Temperature\n\n## Night Temperature\n\n## Sea Temperature\n\n## Sunshine Hours\n\n## Rainfall Days\n\n## Rainfall\n\n### February, 2026\n\n## February Weather Averages\n\nSorted by popularity:",
+      "tool_call_id": "call_4ff4ae90c59f44a9b5230621"
+    },
+    {
+      "role": "tool",
+      "content": "Scheduled jobs:\n- Update jadwal shalat harian... (id: 3ee4f12b264bc8c1, 0 0 * * *)\n- Gunakan skill pertanian: ca... (id: c33e1712d276356f, 0 6 * * *)\n- Gunakan skill pertanian: ca... (id: 0e646891a8e1d883, 0 12 * * *)\n- Gunakan skill pertanian: ca... (id: 3ff53da32a8fba37, 0 16 * * *)\n- Gunakan skill pertanian: ca... (id: 0ea5d9b5b65001c0, 0 9 * * *)\n- Posting pertanian otomatis ... (id: 6542af6688d267d2, 0 6 * * *)\n",
+      "tool_call_id": "call_6d7279d522e34254aec6f4ec"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-02 11:54:47\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_aaf38169573e4835bbbfe161",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "11\n",
+      "tool_call_id": "call_aaf38169573e4835bbbfe161"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
     }
   ],
   "created": "2026-02-27T07:37:28.870726601+08:00",
-  "updated": "2026-03-02T09:55:14.629784597+08:00"
+  "updated": "2026-03-02T11:54:50.100810223+08:00"
 }

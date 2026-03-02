@@ -66,10 +66,12 @@
         "to": "207853653"
       },
       "state": {
-        "nextRunAtMs": 1772424000000
+        "nextRunAtMs": 1772510400000,
+        "lastRunAtMs": 1772424000365,
+        "lastStatus": "ok"
       },
       "createdAtMs": 1772380402171,
-      "updatedAtMs": 1772380402171,
+      "updatedAtMs": 1772424000365,
       "deleteAfterRun": false
     },
     {

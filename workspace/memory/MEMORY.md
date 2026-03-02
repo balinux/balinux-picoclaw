@@ -103,4 +103,8 @@ This file stores important information that should persist across sessions.
 - Heartbeat check shows system running normally despite inactive services
 - Bali weather: Warm (27-31°C), end of rainy season with occasional showers
 - 168 processes running, 385MB memory used, 29% disk usage
-- Social media downloader skill working with multi-channel delivery
+- Social media downloader skill working with multi-channel delivery## Facebook Configuration for Agriculture Skill
+- File .env exists at: /home/balinux/.picoclaw/workspace/skills/pertanian/.env
+- FACEBOOK_PAGE_ID and FACEBOOK_ACCESS_TOKEN are currently empty
+- To enable Facebook posting: fill in valid PAGE_ID and ACCESS_TOKEN values
+- Once configured, the agriculture skill will be able to post content to Facebook automatically
