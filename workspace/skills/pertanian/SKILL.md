@@ -179,30 +179,6 @@ echo "$(date '+%Y-%m-%d %H:%M') | Harga Cabai Merah | SUKSES" >> ~/.picoclaw/wor
 
 ---
 
-## Setup Jadwal Otomatis via Cron PicoClaw
-
-```bash
-# Pagi: Info cuaca & tips
-picoclaw cron add \
-  --name "pertanian-pagi" \
-  --message "Gunakan skill pertanian: cari info cuaca terkini dan buat tips bertani hari ini, lalu posting ke Facebook dengan format Tips Praktis." \
-  --cron "0 6 * * *"
-
-# Siang: Harga komoditas
-picoclaw cron add \
-  --name "pertanian-harga" \
-  --message "Gunakan skill pertanian: cari harga komoditas pertanian terkini (cabai, bawang, jagung, padi), buat postingan update harga, lalu posting ke Facebook." \
-  --cron "0 12 * * *"
-
-# Sore: Edukasi
-picoclaw cron add \
-  --name "pertanian-edukasi" \
-  --message "Gunakan skill pertanian: cari fakta atau tips menarik seputar pertanian organik atau teknologi pertanian modern, buat konten edukasi singkat, lalu posting ke Facebook." \
-  --cron "0 16 * * *"
-```
-
----
-
 ## Sumber Referensi yang Direkomendasikan untuk Dicari
 
 Saat melakukan web search, prioritaskan informasi dari sumber-sumber ini:
