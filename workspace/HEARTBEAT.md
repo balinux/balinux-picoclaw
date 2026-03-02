@@ -20,3 +20,13 @@ This file contains tasks for the heartbeat service to check periodically.
 ---
 
 Add your heartbeat tasks below this line:
+
+## Task: Facebook Pertanian Otomatis
+- Jalankan perintah `date +%H` untuk cek jam sekarang
+- Jika jam 06: gunakan spawn tool dengan instruksi:
+  "Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log"
+- Jika jam 12: gunakan spawn tool dengan instruksi:
+  "Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log"
+- Jika jam 16: gunakan spawn tool dengan instruksi:
+  "Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log"
+- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.

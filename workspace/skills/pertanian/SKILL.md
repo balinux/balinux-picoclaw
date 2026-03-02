@@ -5,6 +5,28 @@ Skill ini digunakan untuk mencari informasi pertanian terkini, membuat konten ed
 
 ---
 
+## Mode Penggunaan
+
+### 🤖 Mode Otomatis (via HEARTBEAT)
+Dijalankan otomatis sesuai jadwal. Agent memilih topik sendiri berdasarkan waktu
+dan hasil web search terkini.
+
+### 💬 Mode Manual (via Pesan Pengguna)
+Dijalankan saat pengguna mengirim perintah langsung. Contoh:
+- "gunakan skill pertanian: bagaimana merawat strawberry, selanjutnya posting konten"
+- "gunakan skill pertanian: buat konten hama padi"
+- "gunakan skill pertanian: tips pupuk organik, posting ke Facebook"
+
+**Instruksi untuk mode manual:**
+1. Identifikasi topik dari perintah pengguna
+2. Lakukan web search untuk topik tersebut
+3. Tentukan format konten yang paling sesuai (lihat bagian Format Konten)
+4. Buat konten sesuai format
+5. Tampilkan preview konten ke pengguna
+6. Posting ke Facebook
+7. Catat di log
+
+---
 ## Topik yang Dicakup
 - Teknik budidaya tanaman (padi, jagung, cabai, tomat, dll)
 - Pengendalian hama dan penyakit tanaman
