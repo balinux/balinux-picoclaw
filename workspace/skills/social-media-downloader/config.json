@@ -1,0 +1,44 @@
+{
+  "name": "social-media-downloader",
+  "version": "1.0.0",
+  "description": "Download and send videos from Instagram, YouTube, and other social media platforms directly to chat",
+  "dependencies": [
+    "yt-dlp",
+    "ffmpeg",
+    "curl"
+  ],
+  "files": [
+    "download_video.sh",
+    "upload_telegram.sh",
+    "social_media_downloader.sh",
+    "SKILL.md"
+  ],
+  "commands": {
+    "download": {
+      "description": "Download video from URL and send to current chat",
+      "usage": "/download <url>",
+      "handler": "social_media_downloader.sh"
+    },
+    "ig": {
+      "description": "Download Instagram video and send to current chat",
+      "usage": "/ig <url>",
+      "handler": "social_media_downloader.sh"
+    },
+    "yt": {
+      "description": "Download YouTube video and send to current chat",
+      "usage": "/yt <url>",
+      "handler": "social_media_downloader.sh"
+    }
+  },
+  "config": {
+    "download_dir": "/home/balinux/.picoclaw/workspace/downloads/",
+    "max_file_size": 52428800,
+    "supported_platforms": [
+      "instagram",
+      "youtube",
+      "tiktok",
+      "twitter",
+      "facebook"
+    ]
+  }
+}

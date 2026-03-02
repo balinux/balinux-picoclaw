@@ -1,0 +1,293 @@
+{
+  "session": {
+    "dm_scope": "per-channel-peer"
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "~/.picoclaw/workspace",
+      "restrict_to_workspace": false,
+      "provider": "",
+      "model_name": "qwen3-coder-plus",
+      "model": "qwen3-coder-plus",
+      "max_tokens": 8192,
+      "max_tool_iterations": 20
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": false,
+      "bridge_url": "ws://localhost:3001",
+      "allow_from": []
+    },
+    "telegram": {
+      "enabled": true,
+      "token": "7300704296:AAGyq7lF0pHdp9OCBMqIpAhGt2r2pcLryWA",
+      "proxy": "",
+      "allow_from": [
+        "207853653",
+	"969997242",
+        "-5245593640"
+      ],
+      "mention_only": true
+    },
+    "feishu": {
+      "enabled": false,
+      "app_id": "",
+      "app_secret": "",
+      "encrypt_key": "",
+      "verification_token": "",
+      "allow_from": []
+    },
+    "discord": {
+      "enabled": false,
+      "token": "",
+      "allow_from": [],
+      "mention_only": false
+    },
+    "maixcam": {
+      "enabled": false,
+      "host": "0.0.0.0",
+      "port": 18790,
+      "allow_from": []
+    },
+    "qq": {
+      "enabled": false,
+      "app_id": "",
+      "app_secret": "",
+      "allow_from": []
+    },
+    "dingtalk": {
+      "enabled": false,
+      "client_id": "",
+      "client_secret": "",
+      "allow_from": []
+    },
+    "slack": {
+      "enabled": false,
+      "bot_token": "",
+      "app_token": "",
+      "allow_from": []
+    },
+    "line": {
+      "enabled": false,
+      "channel_secret": "",
+      "channel_access_token": "",
+      "webhook_host": "0.0.0.0",
+      "webhook_port": 18791,
+      "webhook_path": "/webhook/line",
+      "allow_from": []
+    },
+    "onebot": {
+      "enabled": false,
+      "ws_url": "ws://127.0.0.1:3001",
+      "access_token": "",
+      "reconnect_interval": 5,
+      "group_trigger_prefix": [],
+      "allow_from": []
+    },
+    "wecom": {
+      "enabled": false,
+      "token": "",
+      "encoding_aes_key": "",
+      "webhook_url": "",
+      "webhook_host": "0.0.0.0",
+      "webhook_port": 18793,
+      "webhook_path": "/webhook/wecom",
+      "allow_from": [],
+      "reply_timeout": 5
+    },
+    "wecom_app": {
+      "enabled": false,
+      "corp_id": "",
+      "corp_secret": "",
+      "agent_id": 0,
+      "token": "",
+      "encoding_aes_key": "",
+      "webhook_host": "0.0.0.0",
+      "webhook_port": 18792,
+      "webhook_path": "/webhook/wecom-app",
+      "allow_from": [],
+      "reply_timeout": 5
+    }
+  },
+  "model_list": [
+    {
+      "model_name": "glm-4.7",
+      "model": "zhipu/glm-4.7",
+      "api_base": "https://open.bigmodel.cn/api/paas/v4",
+      "api_key": ""
+    },
+    {
+      "model_name": "gpt-5.2",
+      "model": "openai/gpt-5.2",
+      "api_base": "https://api.openai.com/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "claude-sonnet-4.6",
+      "model": "anthropic/claude-sonnet-4.6",
+      "api_base": "https://api.anthropic.com/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "deepseek-chat",
+      "model": "deepseek/deepseek-chat",
+      "api_base": "https://api.deepseek.com/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "gemini-2.0-flash",
+      "model": "gemini/gemini-2.0-flash-exp",
+      "api_base": "https://generativelanguage.googleapis.com/v1beta",
+      "api_key": ""
+    },
+    {
+      "model_name": "qwen-plus",
+      "model": "qwen/qwen-plus",
+      "api_base": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "moonshot-v1-8k",
+      "model": "moonshot/moonshot-v1-8k",
+      "api_base": "https://api.moonshot.cn/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "llama-3.3-70b",
+      "model": "groq/llama-3.3-70b-versatile",
+      "api_base": "https://api.groq.com/openai/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "openrouter-auto",
+      "model": "openrouter/auto",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "openrouter-gpt-5.2",
+      "model": "openrouter/openai/gpt-5.2",
+      "api_base": "https://openrouter.ai/api/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "nemotron-4-340b",
+      "model": "nvidia/nemotron-4-340b-instruct",
+      "api_base": "https://integrate.api.nvidia.com/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "cerebras-llama-3.3-70b",
+      "model": "cerebras/llama-3.3-70b",
+      "api_base": "https://api.cerebras.ai/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "doubao-pro",
+      "model": "volcengine/doubao-pro-32k",
+      "api_base": "https://ark.cn-beijing.volces.com/api/v3",
+      "api_key": ""
+    },
+    {
+      "model_name": "deepseek-v3",
+      "model": "shengsuanyun/deepseek-v3",
+      "api_base": "https://api.shengsuanyun.com/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "gemini-flash",
+      "model": "antigravity/gemini-3-flash",
+      "api_key": "",
+      "auth_method": "oauth"
+    },
+    {
+      "model_name": "copilot-gpt-5.2",
+      "model": "github-copilot/gpt-5.2",
+      "api_base": "http://localhost:4321",
+      "api_key": "",
+      "auth_method": "oauth"
+    },
+    {
+      "model_name": "llama3",
+      "model": "ollama/llama3",
+      "api_base": "http://localhost:11434/v1",
+      "api_key": "ollama"
+    },
+    {
+      "model_name": "mistral-small",
+      "model": "mistral/mistral-small-latest",
+      "api_base": "https://api.mistral.ai/v1",
+      "api_key": ""
+    },
+    {
+      "model_name": "qwen3-coder-plus",
+      "model": "qwen3-coder-plus",
+      "api_base": "http://127.0.0.1:8317/v1",
+      "api_key": "123balinux"
+    }
+  ],
+  "gateway": {
+    "host": "127.0.0.1",
+    "port": 18790
+  },
+  "tools": {
+    "web": {
+      "brave": {
+        "enabled": false,
+        "api_key": "",
+        "max_results": 5
+      },
+      "tavily": {
+        "enabled": true,
+        "api_key": "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",
+        "base_url": "",
+        "max_results": 5
+      },
+      "duckduckgo": {
+        "enabled": false,
+        "max_results": 5
+      },
+      "perplexity": {
+        "enabled": false,
+        "api_key": "",
+        "max_results": 5
+      }
+    },
+    "cron": {
+      "exec_timeout_minutes": 5
+    },
+    "exec": {
+      "enable_deny_patterns": true,
+      "custom_deny_patterns": null
+    },
+    "skills": {
+      "registries": {
+        "clawhub": {
+          "enabled": true,
+          "base_url": "https://clawhub.ai",
+          "auth_token": "",
+          "search_path": "",
+          "skills_path": "",
+          "download_path": "",
+          "timeout": 0,
+          "max_zip_size": 0,
+          "max_response_size": 0
+        }
+      },
+      "max_concurrent_searches": 2,
+      "search_cache": {
+        "max_size": 50,
+        "ttl_seconds": 300
+      }
+    }
+  },
+  "heartbeat": {
+    "enabled": true,
+    "interval": 30
+  },
+  "devices": {
+    "enabled": false,
+    "monitor_usb": true
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "3ee4f12b264bc8c1",
+      "name": "Update jadwal shalat harian...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Update jadwal shalat harian untuk Lombok Timur dan setup reminder",
+        "command": "bash /home/balinux/.picoclaw/workspace/scripts/daily_prayer_update.sh",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1772467200000,
+        "lastRunAtMs": 1772380800365,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772196986532,
+      "updatedAtMs": 1772380802770,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "c33e1712d276356f",
+      "name": "Gunakan skill pertanian: ca...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Gunakan skill pertanian: cari info cuaca terkini dan buat tips bertani hari ini, lalu posting ke Facebook dengan format Tips Praktis.",
+        "deliver": true,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1772488800000,
+        "lastRunAtMs": 1772402400365,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772380400289,
+      "updatedAtMs": 1772402400366,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "0e646891a8e1d883",
+      "name": "Gunakan skill pertanian: ca...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Gunakan skill pertanian: cari harga komoditas pertanian terkini (cabai, bawang, jagung, padi), buat postingan update harga, lalu posting ke Facebook.",
+        "deliver": true,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1772424000000
+      },
+      "createdAtMs": 1772380402171,
+      "updatedAtMs": 1772380402171,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "3ff53da32a8fba37",
+      "name": "Gunakan skill pertanian: ca...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 16 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Gunakan skill pertanian: cari fakta atau tips menarik seputar pertanian organik atau teknologi pertanian modern, buat konten edukasi singkat, lalu posting ke Facebook.",
+        "deliver": true,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1772438400000
+      },
+      "createdAtMs": 1772380404517,
+      "updatedAtMs": 1772380404517,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "0ea5d9b5b65001c0",
+      "name": "Gunakan skill pertanian: ca...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Gunakan skill pertanian: cari informasi terbaru tentang teknik budidaya tanaman (padi, jagung, cabai, tomat, dll), buat postingan dengan format Tips Praktis, lalu posting ke Facebook.",
+        "deliver": true,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1772499600000,
+        "lastRunAtMs": 1772413200366,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772380407449,
+      "updatedAtMs": 1772413200366,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "6542af6688d267d2",
+      "name": "Posting pertanian otomatis ...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Posting pertanian otomatis jam 06:00 - Info cuaca \u0026 tips praktis (Format A)",
+        "command": "/home/balinux/.picoclaw/workspace/skills/pertanian/scripts/post_to_facebook.py --format A",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1772488800000
+      },
+      "createdAtMs": 1772402915602,
+      "updatedAtMs": 1772402915605,
+      "deleteAfterRun": false
+    }
+  ]
+}
