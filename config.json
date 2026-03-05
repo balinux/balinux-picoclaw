@@ -8,7 +8,7 @@
       "restrict_to_workspace": true,
       "allow_read_outside_workspace": false,
       "provider": "",
-      "model": "",
+      "model": "qwen3-coder-plus",
       "max_tokens": 32768,
       "max_tool_iterations": 50,
       "summarize_message_threshold": 20,
@@ -25,18 +25,24 @@
       "reasoning_channel_id": ""
     },
     "telegram": {
-      "enabled": false,
-      "token": "",
+      "enabled": true,
+      "token": "7300704296:AAGyq7lF0pHdp9OCBMqIpAhGt2r2pcLryWA",
       "base_url": "",
       "proxy": "",
-      "allow_from": [],
-      "group_trigger": {},
+      "allow_from": [
+        "207853653",
+        "-5245593640",
+        "-564241195"
+      ],
+      "group_trigger": {
+        "mention_only": true
+      },
       "typing": {
         "enabled": true
       },
       "placeholder": {
         "enabled": true,
-        "text": "Thinking... 💭"
+        "text": "Bentar ya, lagi mikir ... 💭"
       },
       "reasoning_channel_id": ""
     },
@@ -283,10 +289,10 @@
       "api_key": ""
     },
     {
-      "model_name": "local-model",
-      "model": "vllm/custom-model",
-      "api_base": "http://localhost:8000/v1",
-      "api_key": ""
+      "model_name": "qwen3-coder-plus",
+      "model": "qwen3-coder-plus",
+      "api_base": "http://127.0.0.1:8317/v1",
+      "api_key": "123balinux"
     }
   ],
   "gateway": {
@@ -303,8 +309,8 @@
         "max_results": 5
       },
       "tavily": {
-        "enabled": false,
-        "api_key": "",
+        "enabled": true,
+        "api_key": "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",
         "base_url": "",
         "max_results": 0
       },
