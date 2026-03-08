@@ -1,54 +1,72 @@
-#!/usr/bin/env python3
-import sys
+# scripts/facebook_post_simple.py
+# Skrip posting Facebook minimal — hanya pakai stdlib Python (tanpa requests/dotenv)
+
 import os
-from urllib.parse import urlencode
-from urllib.request import urlopen, Request
+import urllib.request
+import urllib.parse
 import json
+import sys
 
-# Load dari ~/.picoclaw/.env
-# Baca file .env secara manual karena modul dotenv tidak tersedia
-env_path = os.path.expanduser("~/.picoclaw/workspace/skills/pertanian/.env")
-with open(env_path, 'r') as f:
-    for line in f:
-        if '=' in line:
-            key, value = line.strip().split('=', 1)
-            os.environ[key] = value
-
-PAGE_ID = os.getenv("FACEBOOK_PAGE_ID")
-ACCESS_TOKEN = os.getenv("FACEBOOK_ACCESS_TOKEN")
-
-if not PAGE_ID or not ACCESS_TOKEN:
-    print("❌ Error: FACEBOOK_PAGE_ID atau FACEBOOK_ACCESS_TOKEN belum diset di .env")
-    sys.exit(1)
-
-def post_to_facebook(message):
-    url = f"https://graph.facebook.com/v19.0/{PAGE_ID}/feed"
-    
-    # Encode data
-    data = {
-        "message": message,
-        "access_token": ACCESS_TOKEN
-    }
-    encoded_data = urlencode(data).encode('utf-8')
-    
-    # Create request
-    req = Request(url, data=encoded_data, method="POST")
-    req.add_header("Content-Type", "application/x-www-form-urlencoded")
-    
+def main():
+    # Baca .env manual
+    TOKEN = None
+    PAGE_ID = "me"  # default ke profil pengguna
     try:
-        response = urlopen(req)
-        result = json.loads(response.read().decode('utf-8'))
-        
-        if "id" in result:
-            print(f"✅ Sukses posting! ID: {result['id']}")
-        else:
-            print(f"❌ Gagal: {result.get('error', {}).get('message', 'Unknown error')}")
+        with open(".env", "r") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                if line.startswith("FACEBOOK_ACCESS_TOKEN="):
+                    TOKEN = line.split("=", 1)[1].strip().strip('"').strip("'")
+                elif line.startswith("FACEBOOK_PAGE_ID="):
+                    PAGE_ID = line.split("=", 1)[1].strip().strip('"').strip("'")
+    except FileNotFoundError:
+        print("⚠️  File .env tidak ditemukan.")
+        print("   → Salin .env.template ke .env, lalu isi FACEBOOK_ACCESS_TOKEN")
+        sys.exit(1)
+
+    if not TOKEN:
+        print("❌ Token Facebook belum diisi di .env")
+        sys.exit(1)
+
+    # Baca draft konten
+    try:
+        with open("data/fb_draft_2026.txt", "r", encoding="utf-8") as f:
+            message = f.read().strip()
+    except FileNotFoundError:
+        print("❌ Draft konten tidak ditemukan di data/fb_draft_2026.txt")
+        sys.exit(1)
+
+    # Siapkan request
+    url = f"https://graph.facebook.com/v19.0/{PAGE_ID}/feed"
+    data = urllib.parse.urlencode({
+        "message": message,
+        "access_token": TOKEN
+    }).encode("utf-8")
+
+    req = urllib.request.Request(url, data=data, method="POST")
+    req.add_header("Content-Type", "application/x-www-form-urlencoded")
+
+    print("📤 Mengirim ke Facebook... (API v19.0)")
+    try:
+        with urllib.request.urlopen(req) as resp:
+            result = json.loads(resp.read().decode())
+            print("✅ Posting berhasil!")
+            print("ID:", result.get("id"))
+            if result.get("id"):
+                print("Link publik:", f"https://facebook.com/{result['id']}")
+    except urllib.error.HTTPError as e:
+        print(f"❌ Gagal: {e.code} {e.reason}")
+        try:
+            err_detail = e.read().decode()
+            print("Detail error:", err_detail)
+        except:
+            pass
+        sys.exit(1)
     except Exception as e:
-        print(f"❌ Error: {str(e)}")
+        print(f"❌ Error tak terduga: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python3 facebook_post.py '<pesan>'")
-        sys.exit(1)
-    message = " ".join(sys.argv[1:])
-    post_to_facebook(message)
+    main()

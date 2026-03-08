@@ -1,217 +1,37 @@
-# 🌾 Skill: Pertanian Content Creator & Advisor
+# Skill: pertanian
 
 ## Deskripsi
-Skill ini digunakan untuk mencari informasi pertanian terkini, membuat konten edukatif seputar pertanian (cuaca, hama, teknik tanam, harga komoditas), dan mempostingnya ke Facebook secara otomatis. Cocok untuk halaman Facebook komunitas petani, penyuluh pertanian, atau agribisnis.
+Skill ini membantu menyebarkan konten edukasi pertanian (organik, teknologi, kearifan lokal) ke Facebook secara otomatis. Dirancang untuk petani, penyuluh, dan komunitas pertanian.
 
----
-
-## Mode Penggunaan
-
-### 🤖 Mode Otomatis (via HEARTBEAT/Cron)
-Dijalankan otomatis sesuai jadwal. Agent memilih topik sendiri berdasarkan waktu
-dan hasil web search terkini.
-
-### 💬 Mode Manual (via Pesan Pengguna)
-Dijalankan saat pengguna mengirim perintah langsung. Contoh:
-- "gunakan skill pertanian: bagaimana merawat strawberry"
-- "gunakan skill pertanian: buat konten hama padi"
-- "gunakan skill pertanian: tips pupuk organik"
-
-**Instruksi untuk mode manual:**
-1. Identifikasi topik dari perintah pengguna
-2. Lakukan web search untuk topik tersebut
-3. Tentukan format konten yang paling sesuai (lihat bagian Format Konten)
-4. Buat konten sesuai format
-5. Tampilkan preview konten ke pengguna
-6. Simulasikan posting ke Facebook (untuk testing)
-7. Catat di log
-
----
-## Topik yang Dicakup
-- Teknik budidaya tanaman (padi, jagung, cabai, tomat, dll)
-- Pengendalian hama dan penyakit tanaman
-- Informasi cuaca dan musim tanam
-- Harga komoditas pertanian terkini
-- Pupuk dan nutrisi tanaman
-- Pertanian organik dan modern
-- Tips pascapanen dan penyimpanan hasil panen
-- Berita kebijakan pertanian dari pemerintah
-
----
-
-## Langkah-langkah Eksekusi
-
-### 1. 🔍 Cari Informasi / Ide Konten
-Gunakan web search dengan query yang relevan. Contoh:
-
+## Struktur
 ```
-"harga cabai hari ini [bulan tahun]"
-"hama wereng terbaru 2025"
-"tips tanam padi musim kemarau"
-"berita pertanian Indonesia terbaru"
-"cuaca musim tanam [wilayah]"
-"pupuk subsidi terbaru pemerintah"
+skills/pertanian/
+├── SKILL.md            # dokumentasi ini
+├── .env.template       # template konfigurasi token
+├── data/
+│   └── fb_draft_2026.txt   # draft konten siap-post (contoh: 3 fakta pertanian 2026)
+└── scripts/
+    └── facebook_post_simple.py  # skrip posting ke Facebook API
 ```
 
-Pilih informasi yang:
-- **Relevan dan terkini** (utamakan berita < 7 hari)
-- **Praktis dan berguna** bagi petani kecil maupun besar
-- **Lokal** jika memungkinkan (Indonesia, Jawa, Sumatera, dll)
+## Persyaratan
+- Token akses Facebook (dapat dari [Meta Developer](https://developers.facebook.com/))
+- Python 3.8+ dengan modul `requests`
 
----
+## Cara Pakai
+1. Copy `.env.template` → `.env`
+   ```bash
+   cp .env.template .env
+   ```
+2. Edit `.env`: isi `FACEBOOK_ACCESS_TOKEN=xxx`
+3. Sesuaikan draft di `data/fb_draft_2026.txt` (opsional)
+4. Jalankan skrip:
+   ```bash
+   python scripts/facebook_post_simple.py
+   ```
 
-### 2. ✍️ Buat Konten Postingan Facebook
+## Catatan
+- Konten harus mematuhi kebijakan Facebook (tidak spam, tidak menyesatkan)
+- Draft disimpan di `memory/` sebagai backup — lihat `memory/pertanian_backup_20260308/` jika perlu restore
 
-Gunakan format berikut tergantung jenis konten:
-
-#### Format A — Tips Praktis
-```
-💡 TIPS PERTANIAN HARI INI
-
-[Judul tips singkat]
-
-✅ [Poin 1]
-✅ [Poin 2]
-✅ [Poin 3]
-
-Bagikan ke sesama petani! 🌾
-#Pertanian #TipsPetani #Agribisnis
-```
-
-#### Format B — Info Harga Komoditas
-```
-📊 UPDATE HARGA KOMODITAS - [TANGGAL]
-
-🌶️ Cabai Merah   : Rp [harga]/kg
-🌽 Jagung Pipil   : Rp [harga]/kg
-🍅 Tomat          : Rp [harga]/kg
-🌾 Gabah Kering   : Rp [harga]/kg
-
-Sumber: [nama sumber]
-Info lengkap 👇 [link jika ada]
-
-#HargaTani #KomoditasPertanian
-```
-
-#### Format C — Peringatan Hama/Cuaca
-```
-⚠️ WASPADA PETANI!
-
-[Judul peringatan]
-
-📍 Wilayah terdampak: [wilayah]
-🐛 Jenis hama/masalah: [nama]
-🛡️ Cara pengendalian:
-   - [Langkah 1]
-   - [Langkah 2]
-
-Tetap waspada dan jaga tanaman kalian! 💪
-#HamaTanaman #WaspadaPetani
-```
-
-#### Format D — Edukasi / Artikel Singkat
-```
-📚 TAHUKAH KAMU?
-
-[Fakta atau informasi menarik seputar pertanian]
-
-[Penjelasan singkat 2-3 kalimat yang mudah dipahami]
-
-💬 Tulis pengalamanmu di kolom komentar!
-#EdukasiPertanian #PetaniCerdas
-```
-
-**Panduan menulis konten:**
-- Gunakan Bahasa Indonesia yang mudah dipahami petani umum
-- Panjang ideal: **150–400 karakter** untuk postingan biasa, bisa lebih panjang untuk edukasi
-- Gunakan emoji secukupnya agar menarik tapi tidak berlebihan
-- Selalu sertakan hashtag relevan di akhir
-- Hindari informasi yang belum terverifikasi
-
----
-
-### 3. 📤 Posting ke Facebook
-
-Setelah konten siap, jalankan script posting:
-
-```bash
-python3 ~/.picoclaw/workspace/skills/pertanian/scripts/facebook_post.py "<ISI KONTEN POSTINGAN>"
-``` 
-
-Untuk konten panjang (multi-baris), simpan dulu ke file lalu kirim:
-
-```bash
-cat << 'EOF' > /tmp/konten_pertanian.txt
-[ISI KONTEN DI SINI]
-EOF
-
-python3 ~/.picoclaw/workspace/skills/pertanian/scripts/facebook_post.py "$(cat /tmp/konten_pertanian.txt)"
-```
-
----
-
-### 4. 📝 Log Hasil Posting
-
-Catat setiap aktivitas ke file log:
-
-```bash
-echo "$(date '+%Y-%m-%d %H:%M') | [TOPIK] | [STATUS: SUKSES/GAGAL]" >> ~/.picoclaw/workspace/skills/pertanian/data/pertanian_log.txt
-```
-
-Contoh:
-```bash
-echo "$(date '+%Y-%m-%d %H:%M') | Harga Cabai Merah | SUKSES" >> ~/.picoclaw/workspace/skills/pertanian/data/pertanian_log.txt
-```
-
----
-
-## Jadwal Posting yang Direkomendasikan
-
-| Waktu        | Jenis Konten                        |
-|--------------|-------------------------------------|
-| 06:00 pagi   | Info cuaca & kondisi hari ini       |
-| 09:00 pagi   | Tips praktis / teknik budidaya      |
-| 12:00 siang  | Update harga komoditas              |
-| 16:00 sore   | Edukasi / artikel pertanian         |
-| 19:00 malam  | Motivasi / quotes petani (opsional) |
-
-> ⚠️ **Maksimal 3-4 posting per hari** agar tidak dianggap spam oleh Facebook.
-
----
-
-## Sumber Referensi yang Direkomendasikan untuk Dicari
-
-Saat melakukan web search, prioritaskan informasi dari sumber-sumber ini:
-
-- **Kementan RI**: pertanian.go.id
-- **Badan Pusat Statistik**: bps.go.id
-- **Info Harga Pangan**: pihpsnas.bapanas.go.id
-- **BMKG (cuaca)**: bmkg.go.id
-- **Media pertanian**: tabloidsinartani.com, agrozine.id, cybex.pertanian.go.id
-- **Berita lokal** yang relevan dengan wilayah target audiens
-
----
-
-## Contoh Prompt untuk PicoClaw Agent
-
-```
-Gunakan skill pertanian. Cari berita atau tren pertanian terbaru hari ini 
-di Indonesia menggunakan web search. Buat 1 postingan Facebook yang 
-informatif dan menarik untuk petani, gunakan Format Tips Praktis atau 
-Info Harga Komoditas tergantung informasi yang kamu temukan. 
-Setelah konten siap, posting ke Facebook dan catat hasilnya di log.
-```
-
----
-
-## Catatan Penting
-
-- Selalu **verifikasi keakuratan informasi** sebelum posting, terutama untuk data harga dan peringatan hama
-- Jika informasi tidak ditemukan/tidak update, **jangan posting informasi lama** — cari topik lain
-- Gunakan bahasa yang **inklusif dan ramah** untuk semua level petani
-- Untuk konten peringatan hama atau bencana, **segera posting** tanpa menunggu jadwal rutin
-
----
-
-*Skill ini dibuat untuk PicoClaw Agent Framework*
-*Versi: 1.0 | Kategori: Pertanian & Agribisnis*
+> 💡 *“Setiap post adalah benih kesadaran — tanam dengan fakta, panen dengan kepercayaan.”* — PicoClaw

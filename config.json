@@ -5,10 +5,10 @@
   "agents": {
     "defaults": {
       "workspace": "/home/balinux/.picoclaw/workspace",
-      "restrict_to_workspace": true,
-      "allow_read_outside_workspace": false,
+      "restrict_to_workspace": false,
+      "allow_read_outside_workspace": true,
       "provider": "",
-      "model": "qwen3-coder-plus",
+      "model": "vision-model",
       "max_tokens": 32768,
       "max_tool_iterations": 50,
       "summarize_message_threshold": 20,
@@ -35,7 +35,7 @@
         "-564241195"
       ],
       "group_trigger": {
-        "mention_only": true
+	"prefixes": ["!", "@pico", "pico "]
       },
       "typing": {
         "enabled": true
@@ -289,8 +289,8 @@
       "api_key": ""
     },
     {
-      "model_name": "qwen3-coder-plus",
-      "model": "qwen3-coder-plus",
+      "model_name": "vision-model",
+      "model": "vision-model",
       "api_base": "http://127.0.0.1:8317/v1",
       "api_key": "123balinux"
     }
@@ -310,7 +310,7 @@
       },
       "tavily": {
         "enabled": true,
-        "api_key": "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",
+        "api_key": "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",
         "base_url": "",
         "max_results": 0
       },
