@@ -1,0 +1,3 @@
+Harga cabai merah hari {{tanggal}}: Rp{{harga_cabai}}/kg  
+Sumber: Dinas Pertanian Kabupaten X  
+#HargaPertanian #Cabai

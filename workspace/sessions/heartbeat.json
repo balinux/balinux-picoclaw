@@ -26620,8 +26620,1926 @@
     {
       "role": "assistant",
       "content": "Jam sekarang adalah 23:00 — bukan jam posting (06, 12, atau 16), jadi task *Facebook Pertanian Otomatis* di-skip.\n\nTidak ada tugas lain dalam daftar heartbeat yang perlu diproses.\n\nHEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 00:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_f45f976a069b4cc382662994",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "00\n",
+      "tool_call_id": "call_f45f976a069b4cc382662994"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 00:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_c16ba1d8963b4a25ade69f1f",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "00\n",
+      "tool_call_id": "call_c16ba1d8963b4a25ade69f1f"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 01:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Aku akan menjalankan heartbeat check dan memproses task Facebook Pertanian Otomatis sesuai instruksi.\n\nPertama, aku akan cek jam sekarang dengan perintah `date +%H`:\n\n",
+      "tool_calls": [
+        {
+          "id": "call_41fa8ff4df0e4d4f93129b04",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "01\n",
+      "tool_call_id": "call_41fa8ff4df0e4d4f93129b04"
+    },
+    {
+      "role": "assistant",
+      "content": "Jam sekarang adalah 01 (pukul 01:09), yang bukan jam posting (06, 12, 13, atau 16). Jadi task Facebook Pertanian Otomatis bisa di-skip tanpa laporan.\n\nTidak ada task lain dalam daftar heartbeat yang perlu diproses. Semua task telah diperiksa dan tidak ada yang memerlukan tindakan.\n\nHEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 01:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_70d006a0ecac45d5b1fe5400",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "01\n",
+      "tool_call_id": "call_70d006a0ecac45d5b1fe5400"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 02:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_ad9696e9919545baa9d9e79a",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "02\n",
+      "tool_call_id": "call_ad9696e9919545baa9d9e79a"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 02:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_b07d0798359d413cbe15fc2f",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "02\n",
+      "tool_call_id": "call_b07d0798359d413cbe15fc2f"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 03:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_59db264e7c9841a487fc90e3",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "03\n",
+      "tool_call_id": "call_59db264e7c9841a487fc90e3"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 03:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_13c6d26ec1ed4696b31ec040",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "03\n",
+      "tool_call_id": "call_13c6d26ec1ed4696b31ec040"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 04:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_9920921fbe4f4a2aa73775a1",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "04\n",
+      "tool_call_id": "call_9920921fbe4f4a2aa73775a1"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 04:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_3398e73b81644a94b24e40d1",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "04\n",
+      "tool_call_id": "call_3398e73b81644a94b24e40d1"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 05:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_81bcfe2a519343449d2dab22",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "05\n",
+      "tool_call_id": "call_81bcfe2a519343449d2dab22"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 05:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_ce84107e4f764adfa3d57550",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "05\n",
+      "tool_call_id": "call_ce84107e4f764adfa3d57550"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 06:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_f77fb2477a3e4dae9f9af920",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "06\n",
+      "tool_call_id": "call_f77fb2477a3e4dae9f9af920"
+    },
+    {
+      "role": "assistant",
+      "content": "Sekarang jam 06, jadi akan menjalankan tugas posting pagi untuk Facebook Pertanian Otomatis.\n\n",
+      "tool_calls": [
+        {
+          "id": "call_2b0913fdd4a14a7bab814f10",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Posting Pagi Pertanian\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Posting Pagi Pertanian' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log",
+      "tool_call_id": "call_2b0913fdd4a14a7bab814f10"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 06:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_316058690c6e4b75996bb73d",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "06\n",
+      "tool_call_id": "call_316058690c6e4b75996bb73d"
+    },
+    {
+      "role": "assistant",
+      "content": "Sekarang jam 06 — waktunya tugas posting pagi untuk Facebook Pertanian Otomatis. Akan spawn subagent untuk menjalankan tugas tersebut.\n\n",
+      "tool_calls": [
+        {
+          "id": "call_cdeeeaead7d044c79915da2d",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Facebook Pertanian - Posting Pagi (06:00)\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Facebook Pertanian - Posting Pagi (06:00)' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log",
+      "tool_call_id": "call_cdeeeaead7d044c79915da2d"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 07:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_f066fe6ac8e94cf39e01981a",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "07\n",
+      "tool_call_id": "call_f066fe6ac8e94cf39e01981a"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 07:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_f28f7b222e1f4f44b00f92e1",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "07\n",
+      "tool_call_id": "call_f28f7b222e1f4f44b00f92e1"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 08:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_d75c5300ee9b412faa31d78e",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "08\n",
+      "tool_call_id": "call_d75c5300ee9b412faa31d78e"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 08:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_32523a8659a7497495724489",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "08\n",
+      "tool_call_id": "call_32523a8659a7497495724489"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 09:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_df5716e3e2d9400db9fb2c89",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "09\n",
+      "tool_call_id": "call_df5716e3e2d9400db9fb2c89"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 09:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_bd81d3fb729a47bcaffae728",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "09\n",
+      "tool_call_id": "call_bd81d3fb729a47bcaffae728"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 10:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_c246751ee2ef45f295f80428",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "10\n",
+      "tool_call_id": "call_c246751ee2ef45f295f80428"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 10:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_14f43abcd580487ea5055804",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "10\n",
+      "tool_call_id": "call_14f43abcd580487ea5055804"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 11:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_42a355cca4694de8aa59573d",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "11\n",
+      "tool_call_id": "call_42a355cca4694de8aa59573d"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 11:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_52e0ebc88b354d02b7b7bc3e",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "11\n",
+      "tool_call_id": "call_52e0ebc88b354d02b7b7bc3e"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 12:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_ab15de767ea0445e8b71daf1",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "12\n",
+      "tool_call_id": "call_ab15de767ea0445e8b71daf1"
+    },
+    {
+      "role": "assistant",
+      "content": "Saat ini jam 12 — waktu untuk tugas posting siang (Info Harga Komoditas). Akan jalankan subagent untuk menangani tugas tersebut.\n\n",
+      "tool_calls": [
+        {
+          "id": "call_f31b65258a6a4eefa57c4166",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Posting Siang Pertanian (Jam 12)\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Posting Siang Pertanian (Jam 12)' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log",
+      "tool_call_id": "call_f31b65258a6a4eefa57c4166"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 12:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_7a3c9af545ba4ed1984dc451",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "12\n",
+      "tool_call_id": "call_7a3c9af545ba4ed1984dc451"
+    },
+    {
+      "role": "assistant",
+      "content": "Jam sekarang: 12 — sesuai jadwal posting siang (Format B: Info Harga Komoditas).\n\nSedang menjalankan tugas posting siang via subagent...\n\n",
+      "tool_calls": [
+        {
+          "id": "call_41d05ef1c66c452a84b70c9b",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Pertanian Posting Siang (12:00)\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Pertanian Posting Siang (12:00)' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log",
+      "tool_call_id": "call_41d05ef1c66c452a84b70c9b"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 13:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_11a98cecd29646a4849434b8",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "13\n",
+      "tool_call_id": "call_11a98cecd29646a4849434b8"
+    },
+    {
+      "role": "assistant",
+      "content": "Jam sekarang: 13 — sesuai jadwal posting siang (Format B: Info Harga Komoditas).\n\nSedang menjalankan tugas posting siang via subagent...\n\n",
+      "tool_calls": [
+        {
+          "id": "call_8be30cf18ed941f1ac620dc2",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Posting Siang Pertanian (Jam 13)\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Posting Siang Pertanian (Jam 13)' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log",
+      "tool_call_id": "call_8be30cf18ed941f1ac620dc2"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 13:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_13b2ad829d094862b70161d1",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "13\n",
+      "tool_call_id": "call_13b2ad829d094862b70161d1"
+    },
+    {
+      "role": "assistant",
+      "content": "Jam sekarang: 13 — sesuai jadwal posting siang (Format B: Info Harga Komoditas).\n\nAkan spawn subagent untuk menjalankan tugas posting siang:\n\n",
+      "tool_calls": [
+        {
+          "id": "call_ef20e0e1af5c44e3b0c0a17e",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Posting Siang Pertanian (Jam 13)\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Posting Siang Pertanian (Jam 13)' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log",
+      "tool_call_id": "call_ef20e0e1af5c44e3b0c0a17e"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 14:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_a4a1970c6ccb4a1f8fd522f6",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "14\n",
+      "tool_call_id": "call_a4a1970c6ccb4a1f8fd522f6"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 14:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_d43d8246a04d4a7caa2c93c1",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "14\n",
+      "tool_call_id": "call_d43d8246a04d4a7caa2c93c1"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 15:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_2d5d3a03642044c4a6423705",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "15\n",
+      "tool_call_id": "call_2d5d3a03642044c4a6423705"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 15:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_ae8555eadca943f0a24ec133",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "15\n",
+      "tool_call_id": "call_ae8555eadca943f0a24ec133"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 16:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_870d5b25832240528643866b",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "16\n",
+      "tool_call_id": "call_870d5b25832240528643866b"
+    },
+    {
+      "role": "assistant",
+      "content": "Sekarang jam 16 — waktunya tugas posting sore untuk *Facebook Pertanian Otomatis*.\n\nAkan saya spawn subagent untuk menjalankan tugas:  \n- Baca skill pertanian  \n- Cari fakta/tips menarik pertanian  \n- Buat konten Format D (Edukasi)  \n- Posting ke Facebook  \n- Catat di log\n\n",
+      "tool_calls": [
+        {
+          "id": "call_cfcfbe7b63744806a8d3b362",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Posting Sore Pertanian (16:00)\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Posting Sore Pertanian (16:00)' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log",
+      "tool_call_id": "call_cfcfbe7b63744806a8d3b362"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 16:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_da68d5b64fe54d0fbcc5de9b",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "16\n",
+      "tool_call_id": "call_da68d5b64fe54d0fbcc5de9b"
+    },
+    {
+      "role": "assistant",
+      "content": "Sekarang jam 16 — waktunya tugas posting sore untuk *Facebook Pertanian Otomatis*.\n\nAkan saya spawn subagent untuk menjalankan tugas posting sore: cari fakta/tips menarik pertanian, buat konten Format D (Edukasi), posting ke Facebook, dan catat di log.\n\n",
+      "tool_calls": [
+        {
+          "id": "call_7b71f91af2644250833751cb",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Posting Sore Pertanian (Jam 16)\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Posting Sore Pertanian (Jam 16)' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log",
+      "tool_call_id": "call_7b71f91af2644250833751cb"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 17:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_6e55f6e0ff4d4ac4b13f3ee1",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "17\n",
+      "tool_call_id": "call_6e55f6e0ff4d4ac4b13f3ee1"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 17:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_6b8085c3383a494f94ee7d39",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "17\n",
+      "tool_call_id": "call_6b8085c3383a494f94ee7d39"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 18:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_0466d459313f45399c8b7871",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "18\n",
+      "tool_call_id": "call_0466d459313f45399c8b7871"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 18:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me check the current hour first:\n\n",
+      "tool_calls": [
+        {
+          "id": "call_bd9fc2609b5743c3885bbba3",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "18\n",
+      "tool_call_id": "call_bd9fc2609b5743c3885bbba3"
+    },
+    {
+      "role": "assistant",
+      "content": "Current hour is 18 (6 PM), which is not one of the scheduled posting times (06, 12, 13, 16). According to the instructions, I should skip this task without reporting.\n\nSince there are no other tasks listed in the heartbeat check, and this task is skipped, the heartbeat check is complete.\n\nHEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 19:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_2c9778428e0d40c99740f636",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "19\n",
+      "tool_call_id": "call_2c9778428e0d40c99740f636"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 19:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_878440e81c6a4ccea7a09489",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "19\n",
+      "tool_call_id": "call_878440e81c6a4ccea7a09489"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 20:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_a03e462277904a19b8fb6d3b",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "20\n",
+      "tool_call_id": "call_a03e462277904a19b8fb6d3b"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 20:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_1a0bdf2ec9004708b1cb8d47",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "20\n",
+      "tool_call_id": "call_1a0bdf2ec9004708b1cb8d47"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 21:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_0207ef678b2549558bca6c91",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "21\n",
+      "tool_call_id": "call_0207ef678b2549558bca6c91"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 21:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_34c514cc7ad7449b86d871f3",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "21\n",
+      "tool_call_id": "call_34c514cc7ad7449b86d871f3"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 22:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_f231cd1295cb4e3f8227e5dd",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "22\n",
+      "tool_call_id": "call_f231cd1295cb4e3f8227e5dd"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 22:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_2f03049dbb7f46fb8a8aa8d9",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "22\n",
+      "tool_call_id": "call_2f03049dbb7f46fb8a8aa8d9"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 23:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_23090118ac76413d9e9f3897",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "23\n",
+      "tool_call_id": "call_23090118ac76413d9e9f3897"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-09 23:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_abc43ec224ae412a83b54f6f",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "23\n",
+      "tool_call_id": "call_abc43ec224ae412a83b54f6f"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 00:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_d9318918b6244da794b28382",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "00\n",
+      "tool_call_id": "call_d9318918b6244da794b28382"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 00:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_7b2acca07ef4463a86e80f0b",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "00\n",
+      "tool_call_id": "call_7b2acca07ef4463a86e80f0b"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 01:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_9cac195511364018a0de0ebf",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "01\n",
+      "tool_call_id": "call_9cac195511364018a0de0ebf"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 01:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_50a7060c0f554593a4f76680",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "01\n",
+      "tool_call_id": "call_50a7060c0f554593a4f76680"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 02:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_76191ac572244248a130c648",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "02\n",
+      "tool_call_id": "call_76191ac572244248a130c648"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 02:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_8171310616ff4a8592e52489",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "02\n",
+      "tool_call_id": "call_8171310616ff4a8592e52489"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 03:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_5ef215d1d84d46c1a79e2f0d",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "03\n",
+      "tool_call_id": "call_5ef215d1d84d46c1a79e2f0d"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 03:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_ffab6b54c7b14b9ba2a25390",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "03\n",
+      "tool_call_id": "call_ffab6b54c7b14b9ba2a25390"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 04:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_87e04b44d2574b93b7d5ee97",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "04\n",
+      "tool_call_id": "call_87e04b44d2574b93b7d5ee97"
+    },
+    {
+      "role": "assistant",
+      "content": "Saat ini jam 04:00, bukan waktu posting (06, 12, 16), jadi task \"Facebook Pertanian Otomatis\" di-skip.\n\nTidak ada tugas lain dalam daftar heartbeat — semua task telah diproses.\n\nHEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 04:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_cfa8ec9645934dda86da207b",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "04\n",
+      "tool_call_id": "call_cfa8ec9645934dda86da207b"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 05:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_5fe69bc7ac8b41feaaf6bbf2",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "05\n",
+      "tool_call_id": "call_5fe69bc7ac8b41feaaf6bbf2"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 05:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_b614618c21824852a91f151d",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "05\n",
+      "tool_call_id": "call_b614618c21824852a91f151d"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 06:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_ecb144057d7b437899e16d8d",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "06\n",
+      "tool_call_id": "call_ecb144057d7b437899e16d8d"
+    },
+    {
+      "role": "assistant",
+      "content": "Sekarang jam 06 — waktunya tugas posting pagi untuk Facebook Pertanian Otomatis.\n\nAkan saya spawn subagent untuk menjalankan:\n- Baca SKILL.md pertanian\n- Cari cuaca \u0026 tips pertanian hari ini\n- Buat konten Format A (Tips Praktis)\n- Posting ke Facebook\n- Catat di log\n\n",
+      "tool_calls": [
+        {
+          "id": "call_0f441183bbf749719fe8f262",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Posting Pagi Pertanian (06:00)\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Posting Pagi Pertanian (06:00)' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log",
+      "tool_call_id": "call_0f441183bbf749719fe8f262"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 06:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_53d8bdae257944e7be9456cc",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "06\n",
+      "tool_call_id": "call_53d8bdae257944e7be9456cc"
+    },
+    {
+      "role": "assistant",
+      "content": "Sekarang jam 06, jadi akan dijalankan tugas posting pagi untuk Facebook Pertanian Otomatis.\n\n",
+      "tool_calls": [
+        {
+          "id": "call_6900df2d1bc8485b99b749de",
+          "type": "function",
+          "function": {
+            "name": "spawn",
+            "arguments": "{\"label\":\"Posting Pagi Pertanian\",\"task\":\"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "Spawned subagent 'Posting Pagi Pertanian' for task: Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log",
+      "tool_call_id": "call_6900df2d1bc8485b99b749de"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 07:09:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_257176af6d614d4a9e9f3d08",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "07\n",
+      "tool_call_id": "call_257176af6d614d4a9e9f3d08"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
+    },
+    {
+      "role": "user",
+      "content": "# Heartbeat Check\n\nCurrent time: 2026-03-10 07:39:50\n\nYou are a proactive AI assistant. This is a scheduled heartbeat check.\nReview the following tasks and execute any necessary actions using available skills.\nIf there is nothing that requires attention, respond ONLY with: HEARTBEAT_OK\n\n# Heartbeat Check List\n\nThis file contains tasks for the heartbeat service to check periodically.\n\n## Examples\n\n- Check for unread messages\n- Review upcoming calendar events\n- Check device status (e.g., MaixCam)\n\n## Instructions\n\n- Execute ALL tasks listed below. Do NOT skip any task.\n- For simple tasks (e.g., report current time), respond directly.\n- For complex tasks that may take time, use the spawn tool to create a subagent.\n- The spawn tool is async - subagent results will be sent to the user automatically.\n- After spawning a subagent, CONTINUE to process remaining tasks.\n- Only respond with HEARTBEAT_OK when ALL tasks are done AND nothing needs attention.\n\n---\n\nAdd your heartbeat tasks below this line:\n\n## Task: Facebook Pertanian Otomatis\n- Jalankan perintah `date +%H` untuk cek jam sekarang\n- Jika jam 06: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting pagi: cari info cuaca dan tips pertanian hari ini via web search, buat konten Format A (Tips Praktis), posting ke Facebook, catat di log\"\n- Jika jam 12: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 13: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting siang: cari harga komoditas pertanian terkini via web search, buat konten Format B (Info Harga Komoditas), posting ke Facebook, catat di log\"\n- Jika jam 16: gunakan spawn tool dengan instruksi:\n  \"Baca ~/.picoclaw/workspace/skills/pertanian/SKILL.md, jalankan tugas posting sore: cari fakta atau tips menarik pertanian via web search, buat konten Format D (Edukasi), posting ke Facebook, catat di log\"\n- Jika bukan jam posting (06, 12, 16), skip task ini tanpa laporan.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_f336d6a250434da78f199407",
+          "type": "function",
+          "function": {
+            "name": "exec",
+            "arguments": "{\"command\":\"date +%H\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "07\n",
+      "tool_call_id": "call_f336d6a250434da78f199407"
+    },
+    {
+      "role": "assistant",
+      "content": "HEARTBEAT_OK"
     }
   ],
   "created": "2026-02-27T07:37:28.870726601+08:00",
-  "updated": "2026-03-08T23:39:57.259327177+08:00"
+  "updated": "2026-03-10T07:39:54.178228888+08:00"
 }

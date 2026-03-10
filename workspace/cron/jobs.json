@@ -18,12 +18,12 @@
         "to": "207853653"
       },
       "state": {
-        "nextRunAtMs": 1773072000000,
-        "lastRunAtMs": 1772985600443,
+        "nextRunAtMs": 1773158400000,
+        "lastRunAtMs": 1773072000381,
         "lastStatus": "ok"
       },
       "createdAtMs": 1772196986532,
-      "updatedAtMs": 1772985601577,
+      "updatedAtMs": 1773072001614,
       "deleteAfterRun": false
     },
     {
@@ -42,12 +42,12 @@
         "to": "207853653"
       },
       "state": {
-        "nextRunAtMs": 1773007200000,
-        "lastRunAtMs": 1772920800187,
+        "nextRunAtMs": 1773180000000,
+        "lastRunAtMs": 1773093600382,
         "lastStatus": "ok"
       },
       "createdAtMs": 1772380400289,
-      "updatedAtMs": 1772920800187,
+      "updatedAtMs": 1773093600382,
       "deleteAfterRun": false
     },
     {
@@ -66,12 +66,12 @@
         "to": "207853653"
       },
       "state": {
-        "nextRunAtMs": 1773028800000,
-        "lastRunAtMs": 1772942400187,
+        "nextRunAtMs": 1773115200000,
+        "lastRunAtMs": 1773028800377,
         "lastStatus": "ok"
       },
       "createdAtMs": 1772380402171,
-      "updatedAtMs": 1772942400187,
+      "updatedAtMs": 1773028800377,
       "deleteAfterRun": false
     },
     {
@@ -90,12 +90,12 @@
         "to": "207853653"
       },
       "state": {
-        "nextRunAtMs": 1773043200000,
-        "lastRunAtMs": 1772956800186,
+        "nextRunAtMs": 1773129600000,
+        "lastRunAtMs": 1773043200381,
         "lastStatus": "ok"
       },
       "createdAtMs": 1772380404517,
-      "updatedAtMs": 1772956800186,
+      "updatedAtMs": 1773043200381,
       "deleteAfterRun": false
     },
     {
@@ -114,12 +114,12 @@
         "to": "207853653"
       },
       "state": {
-        "nextRunAtMs": 1773018000000,
-        "lastRunAtMs": 1772931600187,
+        "nextRunAtMs": 1773104400000,
+        "lastRunAtMs": 1773018000430,
         "lastStatus": "ok"
       },
       "createdAtMs": 1772380407449,
-      "updatedAtMs": 1772931600187,
+      "updatedAtMs": 1773018000430,
       "deleteAfterRun": false
     },
     {
@@ -139,12 +139,212 @@
         "to": "207853653"
       },
       "state": {
-        "nextRunAtMs": 1773007200000,
-        "lastRunAtMs": 1772920800199,
+        "nextRunAtMs": 1773180000000,
+        "lastRunAtMs": 1773093600395,
         "lastStatus": "ok"
       },
       "createdAtMs": 1772402915602,
-      "updatedAtMs": 1772920800199,
+      "updatedAtMs": 1773093600396,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "24e786e2fdfe1160",
+      "name": "Jadwal posting pagi (08:00)...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Jadwal posting pagi (08:00) — facebook_post_auto.py",
+        "command": "cd /home/balinux/.picoclaw/workspace/skills/pertanian \u0026\u0026 python3 scripts/facebook_post_auto.py",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1773187200000,
+        "lastRunAtMs": 1773100800379,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772989740788,
+      "updatedAtMs": 1773100805715,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "88afc26085a7641f",
+      "name": "Jadwal posting siang (13:00...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 13 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Jadwal posting siang (13:00) — facebook_post_auto.py",
+        "command": "cd /home/balinux/.picoclaw/workspace/skills/pertanian \u0026\u0026 python3 scripts/facebook_post_auto.py",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1773118800000,
+        "lastRunAtMs": 1773032400381,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772989745712,
+      "updatedAtMs": 1773032405452,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "e0a2ff4566fdd9ad",
+      "name": "Jadwal posting sore (17:00)...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Jadwal posting sore (17:00) — facebook_post_auto.py",
+        "command": "cd /home/balinux/.picoclaw/workspace/skills/pertanian \u0026\u0026 python3 scripts/facebook_post_auto.py",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1773133200000,
+        "lastRunAtMs": 1773046800381,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772989754402,
+      "updatedAtMs": 1773046804261,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "18250f57d8f5d425",
+      "name": "Generate \u0026 post daily draft...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Generate \u0026 post daily draft (08:00)",
+        "command": "cd /home/balinux/.picoclaw/workspace/skills/pertanian \u0026\u0026 python3 scripts/generate_draft.py \u0026\u0026 python3 scripts/facebook_post_auto.py",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1773187200000,
+        "lastRunAtMs": 1773100805731,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772990010136,
+      "updatedAtMs": 1773100810359,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "2e3a7bb0edc0f77d",
+      "name": "Generate \u0026 post daily draft...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 13 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Generate \u0026 post daily draft (13:00)",
+        "command": "cd /home/balinux/.picoclaw/workspace/skills/pertanian \u0026\u0026 python3 scripts/generate_draft.py \u0026\u0026 python3 scripts/facebook_post_auto.py",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1773118800000,
+        "lastRunAtMs": 1773032405468,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772990014748,
+      "updatedAtMs": 1773032409031,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "6c1775767eb78c34",
+      "name": "Generate \u0026 post daily draft...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Generate \u0026 post daily draft (17:00)",
+        "command": "cd /home/balinux/.picoclaw/workspace/skills/pertanian \u0026\u0026 python3 scripts/generate_draft.py \u0026\u0026 python3 scripts/facebook_post_auto.py",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1773133200000,
+        "lastRunAtMs": 1773046804273,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772990021283,
+      "updatedAtMs": 1773046808120,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "0d744d7f4b17b054",
+      "name": "✅ Daily agricultural price ...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "✅ Daily agricultural price draft \u0026 simulation scheduled at 08:00",
+        "command": "cd /home/balinux/.picoclaw/workspace \u0026\u0026 python3 scripts/generate_draft.py \u0026\u0026 python3 scripts/facebook_post_auto.py",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1773187200000,
+        "lastRunAtMs": 1773100810375,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772991309913,
+      "updatedAtMs": 1773100814778,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "e251ec0edf9ae687",
+      "name": "📅 Daily FB price post at 08...",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "📅 Daily FB price post at 08:00 — running facebook_post_auto.py",
+        "command": "cd /home/balinux/.picoclaw/workspace \u0026\u0026 python3 scripts/facebook_post_auto.py \u003e\u003e cron_fb.log 2\u003e\u00261",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "207853653"
+      },
+      "state": {
+        "nextRunAtMs": 1773187200000,
+        "lastRunAtMs": 1773100814792,
+        "lastStatus": "ok"
+      },
+      "createdAtMs": 1772992018192,
+      "updatedAtMs": 1773100817648,
       "deleteAfterRun": false
     }
   ]

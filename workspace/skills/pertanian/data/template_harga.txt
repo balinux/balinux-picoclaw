@@ -1,0 +1,13 @@
+🌅 UPDATE {{hari}}, {{tanggal}}  
+*(Data terakhir: {{kemarin}} — PIHPS Nasional)*
+
+🌶️ Cabai rawit: **Rp{{harga_cabai}}/kg** → {{trend_cabai}}  
+🧅 Bawang merah: **Rp{{harga_bawang}}/kg** (rata nasional)  
+🌽 Jagung: **Rp{{harga_jagung}}/kg** — {{trend_jagung}}  
+🌾 Beras: **Rp{{harga_beras_min}}–Rp{{harga_beras_max}}/kg** — {{trend_beras}}
+
+🔍 Catatan: Data harian PIHPS biasanya update pukul 10.00 WIB. Pantau via [PIHPS.id] atau aplikasi BI.
+
+💡 Tips: Belanja bumbu pagi hari di pasar tradisional — harga lebih murah!
+
+#HargaPangan #Update{{hari}} #PetaniCerdas #Agribisnis{{tahun}}
